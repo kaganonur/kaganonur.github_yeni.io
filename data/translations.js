@@ -24,6 +24,24 @@ export const translations = {
       eduVal: "YTÜ İstatistik",
       skills: "Yetkinlikler",
       skillsVal: "Veri Etiketleme, Veri Analizi, Excel, İstatistiksel Analiz",
+      skillsTitle: "Teknik Yetkinlikler",
+      skillCategories: [
+        {
+          title: "İstatistik & Analiz",
+          desc: "Hipotez Testleri, Regresyon Analizi, Olasılık Teorisi.",
+          tags: ["R", "SPSS", "EXCEL"]
+        },
+        {
+          title: "Veri Bilimi",
+          desc: "Veri manipülasyonu, görselleştirme ve modelleme.",
+          tags: ["PYTHON", "SQL", "PANDAS"]
+        },
+        {
+          title: "Veri İşaretleme",
+          desc: "Denetimli öğrenme modelleri için veri temizleme, sınıflandırma ve yüksek doğruluklu etiketleme süreçleri.",
+          tags: ["VERİ YAPILANDIRMA"]
+        }
+      ],
       interests: "İlgi Alanları",
       interestsVal: "Yazılım, Oyun, Animasyon, Seyahat, Öykü Yazarlığı, Yüzme",
       certs: "Sertifikalar",
@@ -86,6 +104,24 @@ export const translations = {
       eduVal: "YTU Statistics",
       skills: "Skills",
       skillsVal: "Data Labeling, Data Analysis, Excel, Statistical Analysis",
+      skillsTitle: "Technical Skills",
+      skillCategories: [
+        {
+          title: "Statistics & Analysis",
+          desc: "Hypothesis Testing, Regression Analysis, Probability Theory.",
+          tags: ["R", "SPSS", "EXCEL"]
+        },
+        {
+          title: "Data Science",
+          desc: "Data manipulation, visualization and modeling.",
+          tags: ["PYTHON", "SQL", "PANDAS"]
+        },
+        {
+          title: "Data Labeling",
+          desc: "Data cleaning, classification and high-accuracy labeling processes for supervised learning models.",
+          tags: ["DATA STRUCTURING"]
+        }
+      ],
       interests: "Interests",
       interestsVal: "Software, Gaming, Animation, Travel, Story & Fiction Writing, Swimming",
       certs: "Certifications",

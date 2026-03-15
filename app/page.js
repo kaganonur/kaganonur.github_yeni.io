@@ -50,10 +50,7 @@ export default function Home() {
                 <h4 className="title-gradient">{t.home.edu}</h4>
                 <p>{t.home.eduVal}</p>
               </div>
-              <div className="stat-card glass-card" style={{ gridColumn: '1 / -1' }}>
-                <h4 className="title-gradient">{t.home.skills}</h4>
-                <p>{t.home.skillsVal}</p>
-              </div>
+
               <div className="stat-card glass-card" style={{ gridColumn: '1 / -1' }}>
                 <h4 className="title-gradient">{t.home.interests}</h4>
                 <p>{t.home.interestsVal}</p>
@@ -102,10 +99,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Teknik Yetkinlikler Bölümü */}
+      <section id="skills" className="section container">
+        <div className="section-wrapper">
+          <h2 className="section-wrapper-title title-gradient">{t.home.skillsTitle}</h2>
+          <div className="skills-grid">
+            {t.home.skillCategories.map((cat, i) => (
+              <div className="skill-card" key={i}>
+                <h3 className="skill-card-title">{cat.title}</h3>
+                <p className="skill-card-desc">{cat.desc}</p>
+                <div className="skill-tags">
+                  {cat.tags.map((tag, j) => (
+                    <span className="skill-tag" key={j}>{tag}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Projeler Bölümü */}
       <section id="projects" className="section container">
-        <h2 className="title-gradient" style={{ marginBottom: '3rem', fontSize: '2.5rem', textAlign: 'center' }}>{t.home.projects}</h2>
-        <div className="grid-2">
+        <div className="section-wrapper">
+          <h2 className="section-wrapper-title title-gradient">{t.home.projects}</h2>
+          <div className="grid-2">
           {/* Müşteri Memnuniyet Analizi */}
           <div className="glass-card proj-card">
             <div className="proj-image">
@@ -168,6 +186,7 @@ export default function Home() {
             <p style={{ fontSize: '0.95rem' }}>
               {t.home.proj3Desc}
             </p>
+          </div>
           </div>
         </div>
       </section>
