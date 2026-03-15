@@ -1,8 +1,8 @@
 export const blogPosts = [
   {
     slug: 'almanya-dresden',
-    title: 'Dresden, Almanya',
-    enTitle: 'Dresden, Germany',
+    title: 'Dresden',
+    enTitle: 'Dresden',
     country: 'Almanya',
     enCountry: 'Germany',
     excerpt: 'Gotik mimarisi ve büyüleyici yapılarıyla karşınızda Almanya Dresden. Hofkirche, Kreuzkirche, Frauenkirche gibi tarihi yapılar...',
@@ -23,8 +23,8 @@ export const blogPosts = [
   },
   {
     slug: 'avusturya-hallstatt',
-    title: 'Hallstatt, Avusturya',
-    enTitle: 'Hallstatt, Austria',
+    title: 'Hallstatt',
+    enTitle: 'Hallstatt',
     country: 'Avusturya',
     enCountry: 'Austria',
     excerpt: 'Eşsiz doğa manzaralarıyla bakmaya doyamayacağınız, insanı adeta etkisine alan bu nadide kasaba...',
@@ -42,8 +42,8 @@ export const blogPosts = [
   },
   {
     slug: 'avusturya-viyana',
-    title: 'Viyana, Avusturya',
-    enTitle: 'Vienna, Austria',
+    title: 'Viyana',
+    enTitle: 'Vienna',
     country: 'Avusturya',
     enCountry: 'Austria',
     excerpt: 'Viyana deyince güzel kahveleri, şık binaları ve eşsiz atmosferiyle sanata âşık bir şehir geliyor...',
@@ -66,8 +66,8 @@ export const blogPosts = [
   },
   {
     slug: 'cekya-prag',
-    title: 'Prag, Çekya',
-    enTitle: 'Prague, Czechia',
+    title: 'Prag',
+    enTitle: 'Prague',
     country: 'Çekya',
     enCountry: 'Czechia',
     excerpt: 'Prag mimari yapısıyla büyüleyici bir şehir. Orta Çağ mimarisinin gözlerimizi boyadığı bu nadide şehir...',
@@ -87,8 +87,8 @@ export const blogPosts = [
   },
   {
     slug: 'cekya-cesky-krumlov',
-    title: 'Český Krumlov, Çekya',
-    enTitle: 'Český Krumlov, Czechia',
+    title: 'Český Krumlov',
+    enTitle: 'Český Krumlov',
     country: 'Çekya',
     enCountry: 'Czechia',
     excerpt: 'İnanılması güç surları, kale kulesi ve Vltava Nehri ile Český Krumlov’a hoş geldiniz...',
@@ -108,8 +108,8 @@ export const blogPosts = [
   },
   {
     slug: 'cekya-karlovy-vary',
-    title: 'Karlovy Vary, Çekya',
-    enTitle: 'Karlovy Vary, Czechia',
+    title: 'Karlovy Vary',
+    enTitle: 'Karlovy Vary',
     country: 'Çekya',
     enCountry: 'Czechia',
     excerpt: 'Mustafa Kemal Atatürk’ün de tedavi amacıyla ziyaret ettiği kaplıcalarıyla ünlü bu küçük şehir...',
@@ -128,8 +128,8 @@ export const blogPosts = [
   },
   {
     slug: 'macaristan-budapeste',
-    title: 'Budapeşte, Macaristan',
-    enTitle: 'Budapest, Hungary',
+    title: 'Budapeşte',
+    enTitle: 'Budapest',
     country: 'Macaristan',
     enCountry: 'Hungary',
     excerpt: 'Kahramanlık hikayelerini anlatan heykelleriyle görkemli Kahramanlar Meydanı, Buda ve Pest’i bağlayan tarihi Zincir Köprü...',
@@ -149,8 +149,8 @@ export const blogPosts = [
   },
   {
     slug: 'slovakya-bratislava',
-    title: 'Bratislava, Slovakya',
-    enTitle: 'Bratislava, Slovakia',
+    title: 'Bratislava',
+    enTitle: 'Bratislava',
     country: 'Slovakya',
     enCountry: 'Slovakia',
     excerpt: '“İşten kaçan işçi”, “Yoldan geçen kadınlara bakan adam”, “şehrin mizahi yüzü” hepsinin tek bir ortak yönü var...',

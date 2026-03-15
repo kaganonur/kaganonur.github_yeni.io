@@ -27,9 +27,6 @@ export default function ClientBlogPost({ post }) {
           
           <div className="gallery-section">
             <h3 className="title-gradient" style={{ marginTop: '4rem', marginBottom: '2rem' }}>{t.blog.gallery}</h3>
-            <p style={{ fontSize: '0.9rem', color: 'var(--accent-gold-light)', marginBottom: '1.5rem' }}>
-              {t.blog.galleryNote}
-            </p>
             <ClientGallery images={post.images} title={title} />
           </div>
           
