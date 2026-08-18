@@ -8,6 +8,26 @@ export async function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const post = blogPosts.find((p) => p.slug === slug);
+
+  if (!post) return { title: 'Yazı bulunamadı' };
+
+  return {
+    title: `${post.title} — ${post.country}`,
+    description: post.excerpt,
+    alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      type: 'article',
+      title: `${post.title} — ${post.country}`,
+      description: post.excerpt,
+      url: `/blog/${post.slug}`,
+      images: post.coverImage ? [post.coverImage] : undefined,
+    },
+  };
+}
+
 export default async function BlogPostPage({ params }) {
   const { slug } = await params;
   const post = blogPosts.find(p => p.slug === slug);
