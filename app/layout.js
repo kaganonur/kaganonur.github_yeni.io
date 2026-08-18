@@ -130,7 +130,7 @@ const personJsonLd = {
   ],
   knowsLanguage: ["tr", "en"],
   sameAs: [
-    "https://www.linkedin.com/in/kağan-onur-1700921b4/",
+    "https://www.linkedin.com/in/kaganonur/",
     "https://www.instagram.com/kagannonur/",
   ],
 };

@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="container footer-inner">
         <div className="footer-links">
           <a href="mailto:kaganonur08@gmail.com">kaganonur08@gmail.com</a>
-          <a href="https://www.linkedin.com/in/kağan-onur-1700921b4/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/kaganonur/" target="_blank" rel="noopener">LinkedIn</a>
           <a href={cvHref} target="_blank" rel="noopener">{t.nav.cv}</a>
         </div>
         <p className="footer-text">

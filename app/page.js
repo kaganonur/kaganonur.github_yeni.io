@@ -23,7 +23,7 @@ export default function Home() {
               <Link href="#projects" className="btn btn-primary">{t.home.btnProjects}</Link>
               <a href={cvHref} target="_blank" rel="noopener" className="btn btn-outline">{t.home.btnCV}</a>
               <a
-                href="https://www.linkedin.com/in/kağan-onur-1700921b4/"
+                href="https://www.linkedin.com/in/kaganonur/"
                 target="_blank"
                 rel="noopener"
                 className="btn btn-ghost"
@@ -258,7 +258,7 @@ export default function Home() {
               <div className="stat-card glass-card stat-card-wide">
                 <h4 className="title-gradient">{t.home.network}</h4>
                 <div className="contact-links">
-                  <a href="https://www.linkedin.com/in/kağan-onur-1700921b4/" target="_blank" rel="noopener" className="btn btn-outline btn-xs">LinkedIn</a>
+                  <a href="https://www.linkedin.com/in/kaganonur/" target="_blank" rel="noopener" className="btn btn-outline btn-xs">LinkedIn</a>
                   <a href="mailto:kaganonur08@gmail.com" className="btn btn-outline btn-xs">kaganonur08@gmail.com</a>
                   <a href="https://www.instagram.com/kagannonur/" target="_blank" rel="noopener" className="btn btn-outline btn-xs">Instagram</a>
                 </div>
