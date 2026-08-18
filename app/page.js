@@ -84,6 +84,9 @@ export default function Home() {
               <a href="/assets/raporlar/bitirme-tezi.pdf" target="_blank" rel="noopener" className="btn btn-outline btn-sm">
                 {t.home.viewThesis}
               </a>
+              <a href="/assets/raporlar/tez-poster.pdf" target="_blank" rel="noopener" className="btn btn-outline btn-sm">
+                {t.home.viewPoster}
+              </a>
             </div>
           </article>
 
