@@ -23,9 +23,9 @@ export const translations = {
 
       highlightsTitle: "Öne Çıkanlar",
       highlights: [
-        { value: "252 ay", label: "Türkiye makro-finans zaman serisi", note: "5 seri · Oca 2005 – Ara 2025 · bitirme tezi" },
-        { value: "%0,57", label: "fiyat %1 arttığında oyuncu kaybı", note: "108 gözlemli panel · sabit etkiler · p = 0,002" },
-        { value: "mesite.org", label: "tek başıma geliştirip yayına aldığım platform", note: "FastAPI · PostgreSQL · Neo4j · Docker" },
+        { value: "Zaman Serisi Analizi", label: "Türkiye yatırım araçları üzerine bitirme tezi", note: "5 seri · 21 yıllık aylık veri · ARIMA, GARCH, LSTM" },
+        { value: "Panel Veri Analizi", label: "Steam indirimlerinin oyuncu sayısına etkisi", note: "9 oyun × 12 ay · sabit etkiler · cluster-robust" },
+        { value: "mesite.org", label: "tek başıma geliştirip yayına aldığım video platformu", note: "FastAPI · PostgreSQL · Neo4j · Docker" },
         { value: "ASA Data Quest", label: "Türkiye'yi temsil eden ekipte", note: "2025 · uluslararası öğrenci yarışması" }
       ],
 
@@ -172,9 +172,9 @@ export const translations = {
 
       highlightsTitle: "Highlights",
       highlights: [
-        { value: "252 months", label: "Turkish macro-financial time series", note: "5 series · Jan 2005 – Dec 2025 · thesis" },
-        { value: "0.57%", label: "player loss per 1% price increase", note: "108-observation panel · fixed effects · p = 0.002" },
-        { value: "mesite.org", label: "a platform I built and shipped alone", note: "FastAPI · PostgreSQL · Neo4j · Docker" },
+        { value: "Time Series Analysis", label: "undergraduate thesis on Turkish investment instruments", note: "5 series · 21 years of monthly data · ARIMA, GARCH, LSTM" },
+        { value: "Panel Data Analysis", label: "effect of Steam discounts on player numbers", note: "9 games × 12 months · fixed effects · cluster-robust" },
+        { value: "mesite.org", label: "a video platform I built and shipped alone", note: "FastAPI · PostgreSQL · Neo4j · Docker" },
         { value: "ASA Data Quest", label: "on the team representing Türkiye", note: "2025 · international student competition" }
       ],
 
