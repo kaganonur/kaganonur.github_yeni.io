@@ -23,10 +23,10 @@ export const translations = {
 
       highlightsTitle: "Öne Çıkanlar",
       highlights: [
-        { value: "252", label: "aylık zaman serisi gözlemi", note: "Oca 2005 – Ara 2025 · 5 makro-finans serisi" },
-        { value: "R² 0,988", label: "en iyi tahmin doğruluğu", note: "USD/TRY · 46 aylık test seti · ARIMA vs LSTM vs Holt" },
-        { value: "108", label: "gözlemli dengeli panel", note: "9 oyun × 12 ay · Sabit etkiler + cluster-robust" },
-        { value: "1 / 4", label: "Türkiye'yi temsil eden ekipte", note: "ASA Data Quest 2025 · Uluslararası" }
+        { value: "252 ay", label: "Türkiye makro-finans zaman serisi", note: "5 seri · Oca 2005 – Ara 2025 · bitirme tezi" },
+        { value: "%0,57", label: "fiyat %1 arttığında oyuncu kaybı", note: "108 gözlemli panel · sabit etkiler · p = 0,002" },
+        { value: "mesite.org", label: "tek başıma geliştirip yayına aldığım platform", note: "FastAPI · PostgreSQL · Neo4j · Docker" },
+        { value: "ASA Data Quest", label: "Türkiye'yi temsil eden ekipte", note: "2025 · uluslararası öğrenci yarışması" }
       ],
 
       whoAmI: "Ben Kimim?",
@@ -114,7 +114,7 @@ export const translations = {
       panelResult: "Fiyat gerçekten belirleyici: bir oyunun fiyatı %1 arttığında oyuncu sayısı %0,57 azalıyor. Ancak indirim kampanyalarının kendisi fark yaratmadı — hiçbir sezon anlamlı bir artış üretmedi. Nedeni bir ölçüm tuzağıydı: oyuncu sayısındaki farkın %98'ini oyunun zaten ne kadar büyük olduğu açıklıyor. İndirim bir oyunu büyütmüyor; büyük oyunlar zaten kalabalık kalıyor.",
 
       proj1Title: "Müşteri Satın Alma Davranışları Analizi",
-      proj1Desc: "Bir müşterinin satın alma kararını neyin belirlediğini inceledik; açık erişimli bir veri setinde yaş, cinsiyet ve yorum niteliğinin etkisini test ettik. Cinsiyet istatistiksel olarak anlamlı bir belirleyici çıktı, diğer faktörler testte anlamlılık göstermedi.",
+      proj1Desc: "Bir müşterinin satın alma kararını neyin belirlediğini inceledim; açık erişimli bir veri setinde yaş, cinsiyet ve yorum niteliğinin etkisini test ettim. Cinsiyet istatistiksel olarak anlamlı bir belirleyici çıktı, diğer faktörler testte anlamlılık göstermedi.",
 
       proj2Title: "Data Science & Sustainable Development",
       proj2Sub: "American Statistical Association (CIRS) · ASA Data Quest 2025",
@@ -172,10 +172,10 @@ export const translations = {
 
       highlightsTitle: "Highlights",
       highlights: [
-        { value: "252", label: "monthly time series observations", note: "Jan 2005 – Dec 2025 · 5 macro-financial series" },
-        { value: "R² 0.988", label: "best forecast accuracy", note: "USD/TRY · 46-month hold-out · ARIMA vs LSTM vs Holt" },
-        { value: "108", label: "observation balanced panel", note: "9 games × 12 months · Fixed effects + cluster-robust" },
-        { value: "1 of 4", label: "on the team representing Türkiye", note: "ASA Data Quest 2025 · International" }
+        { value: "252 months", label: "Turkish macro-financial time series", note: "5 series · Jan 2005 – Dec 2025 · thesis" },
+        { value: "0.57%", label: "player loss per 1% price increase", note: "108-observation panel · fixed effects · p = 0.002" },
+        { value: "mesite.org", label: "a platform I built and shipped alone", note: "FastAPI · PostgreSQL · Neo4j · Docker" },
+        { value: "ASA Data Quest", label: "on the team representing Türkiye", note: "2025 · international student competition" }
       ],
 
       whoAmI: "Who Am I?",
@@ -263,7 +263,7 @@ export const translations = {
       panelResult: "Price genuinely matters: a 1% price increase reduces player count by 0.57%. But the sales themselves did not move the needle — none of the seasonal periods produced a significant lift. The reason was a measurement trap: 98% of the variation in player numbers is explained by how big the game already is. Discounts don't grow a game; large games simply stay crowded.",
 
       proj1Title: "Customer Purchasing Behaviour Analysis",
-      proj1Desc: "We examined what drives a customer's decision to buy, testing the effect of age, gender and review quality on an open-access dataset. Gender emerged as a statistically significant driver; the other factors did not hold up under testing.",
+      proj1Desc: "I examined what drives a customer's decision to buy, testing the effect of age, gender and review quality on an open-access dataset. Gender emerged as a statistically significant driver, while the other factors did not hold up under testing.",
 
       proj2Title: "Data Science & Sustainable Development",
       proj2Sub: "American Statistical Association (CIRS) · ASA Data Quest 2025",

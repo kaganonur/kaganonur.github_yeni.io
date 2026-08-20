@@ -176,7 +176,7 @@ export default function Home() {
               </div>
               <div className="proj-compact-body">
                 <div className="badge-row">
-                  <span className="badge">{t.home.badgeTeam3}</span>
+                  <span className="badge">{t.home.badgeIndividual}</span>
                 </div>
                 <h3 className="proj-title">{t.home.proj1Title}</h3>
                 <p className="proj-body">{t.home.proj1Desc}</p>
