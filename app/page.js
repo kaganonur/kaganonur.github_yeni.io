@@ -69,11 +69,11 @@ export default function Home() {
 
             <p className="proj-body">{t.home.thesisDesc}</p>
 
-            <div className="proj-detail">
-              <strong>{t.home.labelMethods}</strong> {t.home.thesisMethods}
-            </div>
             <div className="proj-detail proj-detail-result">
               <strong>{t.home.labelResult}</strong> {t.home.thesisResult}
+            </div>
+            <div className="proj-detail proj-detail-methods">
+              <strong>{t.home.labelMethods}</strong> {t.home.thesisMethods}
             </div>
 
             <div className="proj-meta-box">
@@ -90,6 +90,28 @@ export default function Home() {
             </div>
           </article>
 
+          {/* --- MeSite --- */}
+          <article className="glass-card proj-card featured-card">
+            <div className="badge-row">
+              <span className="badge badge-accent">{t.home.badgeLive}</span>
+              <span className="badge">{t.home.badgeIndividual}</span>
+            </div>
+            <h3 className="proj-title">{t.home.mesiteTitle}</h3>
+            <p className="proj-sub">{t.home.mesiteSub}</p>
+            <p className="proj-body">{t.home.mesiteDesc}</p>
+            <div className="proj-detail proj-detail-result">
+              <strong>{t.home.labelResult}</strong> {t.home.mesiteResult}
+            </div>
+            <div className="proj-detail proj-detail-methods">
+              <strong>{t.home.labelMethods}</strong> {t.home.mesiteMethods}
+            </div>
+            <div className="proj-actions">
+              <a href="https://mesite.org" target="_blank" rel="noopener" className="btn btn-outline btn-sm">
+                {t.home.viewSite}
+              </a>
+            </div>
+          </article>
+
           {/* --- Two-up: Panel + ASA --- */}
           <div className="grid-2 proj-grid">
             <article className="glass-card proj-card">
@@ -99,11 +121,11 @@ export default function Home() {
               <h3 className="proj-title">{t.home.panelTitle}</h3>
               <p className="proj-sub">{t.home.panelSub}</p>
               <p className="proj-body">{t.home.panelDesc}</p>
-              <div className="proj-detail">
-                <strong>{t.home.labelMethods}</strong> {t.home.panelMethods}
-              </div>
               <div className="proj-detail proj-detail-result">
                 <strong>{t.home.labelResult}</strong> {t.home.panelResult}
+              </div>
+              <div className="proj-detail proj-detail-methods">
+                <strong>{t.home.labelMethods}</strong> {t.home.panelMethods}
               </div>
               <div className="proj-actions">
                 <a href="/assets/raporlar/panel-veri-analizi.pdf" target="_blank" rel="noopener" className="btn btn-outline btn-sm">
@@ -120,13 +142,13 @@ export default function Home() {
               <h3 className="proj-title">{t.home.proj2Title}</h3>
               <p className="proj-sub">{t.home.proj2Sub}</p>
               <p className="proj-body">{t.home.proj2Desc}</p>
-              <div className="proj-detail">
-                <strong>{t.home.labelModel}</strong> {t.home.proj2ModelVal}
-              </div>
               <div className="proj-detail proj-detail-result">
                 <strong>{t.home.labelFindings}</strong> {t.home.proj2FindVal}
               </div>
               <div className="proj-detail">
+                <strong>{t.home.labelModel}</strong> {t.home.proj2ModelVal}
+              </div>
+              <div className="proj-detail proj-detail-methods">
                 <strong>{t.home.labelTests}</strong> {t.home.proj2TestsVal}
               </div>
               <div className="proj-meta-box">
