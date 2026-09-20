@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Yedi faiz indirimi döngüsünün altısında enflasyon düşüyordu. Biri hariç — ve o istisna 2021–2023.">
+<meta name="author" content="Kağan Onur">
+<meta name="theme-color" content="#F4F3EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141519" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://kaganonur.vercel.app/turkiye-ekonomisi/bulgu-03">
+<link rel="icon" href="/favicon.ico">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kağan Onur">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Faizin Yönü">
+<meta property="og:description" content="Yedi faiz indirimi döngüsünün altısında enflasyon düşüyordu. Biri hariç — ve o istisna 2021–2023.">
+<meta property="og:url" content="https://kaganonur.vercel.app/turkiye-ekonomisi/bulgu-03">
+<meta property="og:image" content="https://kaganonur.vercel.app/turkiye-ekonomisi/og/bulgu-03.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<title>Faizin Yönü</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --kagit:#F4F3EF;--kart:#FBFAF8;--murekkep:#15171B;--soluk:#6E7079;
+  --cizgi:#DDDBD4;--ince:#EAE8E2;--piyasa:#3F6E8C;--isaret:#B5391C;--isaret-sis:#B5391C0D;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --kagit:#141519;--kart:#1A1C21;--murekkep:#F1F0EA;--soluk:#9A9CA4;
+  --cizgi:#30333A;--ince:#24272C;--piyasa:#79ACCA;--isaret:#E4714A;--isaret-sis:#E4714A14;}}
+:root[data-theme="dark"]{
+  --kagit:#141519;--kart:#1A1C21;--murekkep:#F1F0EA;--soluk:#9A9CA4;
+  --cizgi:#30333A;--ince:#24272C;--piyasa:#79ACCA;--isaret:#E4714A;--isaret-sis:#E4714A14;}
+*{box-sizing:border-box}
+body{background:var(--kagit);color:var(--murekkep);font-family:var(--serif);-webkit-font-smoothing:antialiased}
+.sayfa{max-width:760px;margin:0 auto;padding-inline:20px;padding-block:clamp(34px,6vw,72px)}
+.kunye{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--soluk);display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+.kunye i{width:22px;height:2px;background:var(--isaret);display:inline-block;font-style:normal}
+h1{font-weight:500;font-size:clamp(36px,8vw,64px);line-height:1.02;letter-spacing:-.025em;
+  margin:.34em 0 .26em;text-wrap:balance}
+.spot{font-size:clamp(18px,2.4vw,21px);line-height:1.52;font-weight:300;max-width:31em;margin:0 0 6px;color:var(--soluk)}
+hr{height:1px;background:var(--cizgi);border:0;margin:30px 0}
+p{font-size:18px;line-height:1.72;max-width:33em;margin:0 0 1.1em;font-weight:350}
+p.giris{font-size:19.5px;line-height:1.66}
+strong{font-weight:600}
+h2{font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.02em;margin:40px 0 12px;max-width:33em}
+h2 span{color:var(--isaret)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kunye .damga{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:0;
+  text-transform:none;color:var(--soluk);padding:2px 7px;border:1px solid var(--cizgi);
+  border-radius:12px}
+
+.vurgu{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:20px;
+  margin:28px 0 32px;padding:20px 0;border-top:2px solid var(--murekkep);border-bottom:1px solid var(--cizgi)}
+.vurgu .rk{font-family:var(--mono);font-size:clamp(25px,4.4vw,32px);font-weight:600;
+  letter-spacing:-.035em;line-height:1;font-variant-numeric:tabular-nums}
+.vurgu .rk.k{color:var(--isaret)}
+.vurgu .bi{font-family:var(--sans);font-size:.46em;font-weight:500;letter-spacing:0}
+.vurgu .ak{font-family:var(--sans);font-size:12px;line-height:1.45;color:var(--soluk);margin-top:9px}
+figure{margin:30px 0 32px}
+.cerceve{background:var(--kart);border:1px solid var(--cizgi);border-radius:4px;padding:18px 18px 12px}
+.gbas{font-family:var(--sans);font-size:14px;font-weight:600;margin:0 0 3px;letter-spacing:-.005em}
+.galt{font-family:var(--sans);font-size:12.5px;color:var(--soluk);margin:0 0 14px;line-height:1.45;max-width:46em}
+.gkaynak{font-family:var(--sans);font-size:10.5px;color:var(--soluk);margin-top:9px;padding-top:8px;border-top:1px solid var(--ince)}
+svg{display:block;width:100%;height:auto;overflow:visible}
+.ipucu{position:fixed;pointer-events:none;opacity:0;transition:opacity .08s;background:var(--murekkep);
+  color:var(--kagit);font-family:var(--mono);font-size:11.5px;line-height:1.5;padding:7px 10px;
+  border-radius:3px;z-index:9;white-space:nowrap;box-shadow:0 4px 18px rgba(0,0,0,.22)}
+.tesst{background:var(--kart);border:1px solid var(--cizgi);border-left:3px solid var(--soluk);
+  border-radius:0 4px 4px 0;padding:18px 20px;margin:32px 0}
+.tesst h3{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--soluk);margin:0 0 10px}
+.tesst p{font-size:16px;line-height:1.62;margin:0 0 .7em;max-width:none}
+.tesst p:last-child{margin-bottom:0}
+.iddia{display:grid;grid-template-columns:1fr;margin:34px 0;border:1px solid var(--cizgi);border-radius:4px;overflow:hidden}
+@media(min-width:620px){.iddia{grid-template-columns:1fr 1fr}}
+.iddia>div{padding:20px 20px 22px;background:var(--kart)}
+.iddia>div+div{border-top:1px solid var(--cizgi)}
+@media(min-width:620px){.iddia>div+div{border-top:0;border-left:1px solid var(--cizgi)}}
+.iddia h3{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin:0 0 10px}
+.evet h3{color:var(--piyasa)}.hayir h3{color:var(--isaret)}
+.iddia p{font-size:16px;line-height:1.6;margin:0;max-width:none}
+p.not{font-family:var(--sans);font-size:14px;line-height:1.6;color:var(--soluk);max-width:36em;
+  background:var(--kart);border:1px solid var(--ince);border-radius:4px;padding:15px 17px;margin:26px 0}
+p.not b{color:var(--murekkep);font-weight:700}
+.kapanis{border-left:3px solid var(--isaret);padding:2px 0 2px 18px;margin:32px 0}
+.kapanis p{margin:0;font-size:17px;line-height:1.65}
+.dipnot{margin-top:46px;padding-top:20px;border-top:1px solid var(--cizgi)}
+.dipnot h2{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--soluk);margin:0 0 14px}
+.dipnot p,.dipnot li{font-family:var(--sans);font-size:12.5px;line-height:1.62;color:var(--soluk);max-width:44em}
+.dipnot ol{padding-left:18px;margin:0}.dipnot li{margin-bottom:10px}
+.dipnot b{color:var(--murekkep)}
+sup{font-family:var(--sans);font-size:10px;font-weight:600;color:var(--isaret);vertical-align:super;line-height:0;margin-left:1px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* ---- üst şerit: portfolyoya dönüş ve bölümler arası geçiş ---- */
+.ustserit{border-bottom:1px solid var(--cizgi);background:var(--kart)}
+.us-ic{max-width:940px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;
+  gap:10px 20px;flex-wrap:wrap}
+.us-logo{font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:-.01em;
+  color:var(--murekkep);text-decoration:none;margin-right:auto;display:flex;align-items:center;gap:8px}
+.us-logo b{width:16px;height:2px;background:var(--isaret);display:inline-block}
+.us-nav{display:flex;gap:4px;flex-wrap:wrap}
+.us-nav a{font-family:var(--sans);font-size:12px;font-weight:500;color:var(--soluk);
+  text-decoration:none;padding:4px 9px;border-radius:14px;transition:color .12s,background .12s}
+.us-nav a:hover{color:var(--murekkep);background:var(--ince)}
+.us-nav a[aria-current="page"]{color:var(--murekkep);font-weight:600;background:var(--ince)}
+.us-nav a.disari{color:var(--piyasa);font-weight:600}
+</style>
+</head>
+<body>
+<div class="ustserit"><div class="us-ic"><a class="us-logo" href="/"><b></b>Kağan Onur</a><nav class="us-nav"><a href="/turkiye-ekonomisi">Genel bakış</a><a href="/turkiye-ekonomisi/bulgu-01">01 Merdiven</a><a href="/turkiye-ekonomisi/bulgu-02">02 Takvim</a><a href="/turkiye-ekonomisi/bulgu-03" aria-current="page">03 Faiz</a><a href="/turkiye-ekonomisi/bulgu-04">04 Karar günü</a><a href="/turkiye-ekonomisi/gezgin">Veri gezgini</a><a class="disari" href="/">Portfolyo →</a></nav></div></div>
+<div class="sayfa">
+  <div class="kunye"><i></i>Türkiye Ekonomisi · Bulgu 03 · Faiz döngüleri<span class="damga">Veri son güncelleme: 20 Eyl 2026</span></div>
+  <h1>Faizin yönü</h1>
+  <p class="spot">Faiz indirimi haberi duyduğunuzda bu iyi haber mi, kötü haber mi?
+  Cevap tek bir şeye bakar: o sırada enflasyon ne yapıyor.</p>
+
+  <hr>
+
+  <p class="giris">Merkez bankası faiz indirdiğinde iki farklı şey olmuş olabilir.
+  Ya enflasyon düşmüştür ve faizin yüksek kalmasına gerek kalmamıştır — bu iyi haberdir.
+  Ya da enflasyon düşmemiştir ama faiz yine de indirilmiştir. Bu ikincisi bambaşka bir şeydir.</p>
+
+  <p>2002'den bugüne politika faizindeki bütün dönüm noktalarını çıkardım. Ortaya
+  <strong>on üç döngü</strong> çıktı: altı sıkılaşma, yedi gevşeme. Sonra her gevşeme
+  döngüsünde enflasyonun ne yaptığına baktım.</p>
+
+  <p>Sonuç şaşırtıcı derecede düzenli: <strong>yedi gevşeme döngüsünün altısında</strong>
+  enflasyon ya düşüyordu ya yerinde sayıyordu. Yani faiz, enflasyonu takip ediyordu.</p>
+
+  <p>Bir tanesi hariç.</p>
+
+  <figure>
+    <div class="cerceve">
+      <p class="gbas">Yedi faiz indirimi döngüsü, enflasyon ne yapıyordu?</p>
+      <p class="galt">Her çubuk, o gevşeme döngüsü boyunca yıllık enflasyonun kaç puan
+      değiştiğini gösteriyor. Solda döngünün tarihi ve faizin kaç puan indirildiği.</p>
+      <svg id="donguler" viewBox="0 0 700 290" role="img"
+           aria-label="Yedi faiz indirimi döngüsünden altısında enflasyon düşüyor ya da sabit; yalnız 2021-2023 döngüsünde enflasyon yirmi puan artıyor"></svg>
+      <p class="gkaynak">Dönüm noktaları politika faizi serisinden türetildi: en az 3 ay süre, en az 2 puan genlik</p>
+    </div>
+  </figure>
+
+  <h2>O bir istisna: Eylül 2021 – Mayıs 2023</h2>
+  <p>Bu yirmi bir aylık dönemde politika faizi <strong>10,5 puan indirildi</strong>.
+  Aynı dönemde yıllık enflasyon <strong>20,3 puan arttı</strong>. Diğer altı döngüde
+  enflasyon ortalama 5 puan <em>düşüyordu</em>.</p>
+  <p>İkisi aynı anda olunca ortaya "reel faiz" dediğimiz şeyin çöküşü çıkıyor. Reel faiz,
+  kabaca, paranızı bankada tutarsanız enflasyona karşı ne kadar koruduğunuz demek.
+  Basitçe: politika faizi eksi enflasyon.</p>
+  <p>2002 ile 2021 arasındaki yirmi yılda reel faiz en kötü <strong>−5,4</strong>'e indi.
+  Kasım 2022'de <strong>−75,4</strong> oldu. On dört katı derin bir çukur. Ve reel faiz
+  tam <strong>yirmi sekiz ay</strong> boyunca −20'nin altında kaldı.<sup>1</sup></p>
+
+  <div class="vurgu">
+    <div><div class="rk k">6<span class="bi">&thinsp;/&thinsp;7</span></div>
+         <div class="ak">Enflasyon düşerken yapılan<br>faiz indirimi döngüsü</div></div>
+    <div><div class="rk k">−75,4</div>
+         <div class="ak">Reel faizin dip noktası<br>(Kasım 2022)</div></div>
+    <div><div class="rk">−5,4</div>
+         <div class="ak">Önceki yirmi yılın<br>en düşük reel faizi</div></div>
+  </div>
+
+  <figure>
+    <div class="cerceve">
+      <p class="gbas">Reel faiz: yirmi yıllık bir zemin, sonra bir uçurum</p>
+      <p class="galt">Politika faizi eksi gerçekleşen yıllık enflasyon. Kesikli çizgi,
+      2002–2021 arasındaki en düşük değeri (−5,4) gösteriyor.</p>
+      <svg id="reel" viewBox="0 0 700 300" role="img"
+           aria-label="Reel faiz 2002-2021 arasında dar bir bantta seyrediyor, 2022'de eksi yetmiş beşe kadar düşüyor, 2024'ten sonra artıya dönüyor"></svg>
+      <p class="gkaynak">Kaynak: TCMB (BIS derlemesi politika faizi) ve TÜİK · aylık, 2003–2026</p>
+    </div>
+  </figure>
+
+  <h2>Peki kural gerçekten kural mı?</h2>
+  <p>Tek bir başka yoldan daha kontrol ettim. Politika faizi ile yıllık enflasyon arasındaki
+  ilişkinin <em>işaretine</em> baktım — 24 aylık kayan pencerede. İşaret pozitifse enflasyon
+  ile faiz aynı yöne gidiyor demektir; negatifse ters yöne.</p>
+  <p>260 ayın <strong>213'ünde</strong> ilişki pozitif. Negatife düştüğü üç dönem var ve en
+  uzunu <strong>Mayıs 2022 – Ocak 2024</strong>: yirmi bir ay boyunca enflasyon ile faiz
+  birbirinin tersine hareket etti.</p>
+
+  <figure>
+    <div class="cerceve">
+      <p class="gbas">Faiz ve enflasyon aynı yöne mi gidiyor?</p>
+      <p class="galt">24 aylık kayan korelasyon. Sıfırın üstü: enflasyon artınca faiz de
+      artıyor. Altı: ters yöne gidiyorlar.</p>
+      <svg id="kor" viewBox="0 0 700 250" role="img"
+           aria-label="Faiz ile enflasyon arasındaki yirmi dört aylık kayan korelasyon çoğunlukla pozitif, 2022-2024 arasında derin biçimde negatife düşüyor"></svg>
+      <p class="gkaynak">Pozitif ay oranı %82 · En uzun negatif dönem: Mayıs 2022 – Ocak 2024</p>
+    </div>
+  </figure>
+
+  <div class="tesst">
+    <h3>Test ettim, tutmadı</h3>
+    <p>Döngü tablosuna ilk baktığımda başka bir kural gördüğümü sandım: merkez bankası
+    faizi <em>hızlı artırıyor, yavaş indiriyor</em> gibiydi. Sıkılaşma döngüleri ortalama
+    14 ay sürüyordu, gevşeme döngüleri 30 ay.</p>
+    <p>Test edince tutmadı. Permütasyon testinde sürenin farkı için
+    <span class="mono">p = 0,20</span>, hızın farkı için <span class="mono">p = 0,39</span>.
+    Sebep basit: gevşeme döngülerinin süresi 4 aydan 76 aya kadar değişiyor. Ortalamalar
+    uzak ama dağılımlar iç içe geçmiş durumda.</p>
+    <p>Yani "hızlı artırır, yavaş indirir" cümlesi bu veriyle söylenemez. Buraya yazıyorum
+    çünkü bir şeyin <em>çıkmaması</em> da sonuçtur — ve ortalamalara bakıp inanılan
+    kuralların çoğu böyle kaybolur.</p>
+  </div>
+
+  <h2>Kurdaki artış enflasyona ne kadar geçiyor?</h2>
+  <p>Buraya kadar faizle enflasyonun ilişkisine baktık. Ama arada bir halka daha var: kur.
+  Türkiye ithalatçı bir ülke, dolayısıyla kur yükselince fiyatlar da yükseliyor. Sorumuz:
+  <strong>ne kadarı, ne kadar sürede?</strong></p>
+  <p>Kurdaki %1'lik artışın TÜFE'ye kaç puan geçtiğini ölçtüm. Üç ay sonunda:
+  2002–2013 arasında <strong>0,09 puan</strong>, 2014–2021'de <strong>0,28</strong>,
+  2021 Eylül'ünden sonra <strong>0,77</strong>. Altı ayda sırasıyla 0,10 · 0,28 · 0,71.<sup>5</sup></p>
+  <p>Burada dikkatli olmam gerekiyor, çünkü tek tek dönem tahminleri güvenilir değil:
+  2002–2013'ün katsayısı hiçbir ufukta sıfırdan ayırt edilemiyor, 2021 sonrasının bir yıllık
+  katsayısı da öyle. Doğru soru şu: <em>dönemler arasındaki fark</em> anlamlı mı?</p>
+  <p>Onu ayrıca test ettim. Üç ay ufkunda 2021 sonrasının katsayısı ilk döneminkinden
+  <strong>0,79 puan yüksek</strong> ve bu fark anlamlı (t=3,42). Altı ayda da anlamlı
+  (t=2,92). On iki ayda sınırda kalıyor (t=1,93). Yani <strong>geçişkenliğin arttığını
+  kısa ve orta vadede gösterebiliyorum, bir yıllık ufukta gösteremiyorum.</strong></p>
+  <p class="not"><b>Yöntemi değiştirdim.</b> Bu sayıların ilk versiyonunda klasik yerel
+  projeksiyon ve HAC standart hataları kullanmıştım. Ama serilerin çoğu birim köklü ve
+  ufuk uzadıkça pencereler üst üste biniyor — bu ikisi bir aradayken HAC'ın verdiği güven
+  aralıkları güvenilmiyor. Montiel Olea ve Plagborg-Møller'in 2021 tarihli çalışmasına göre
+  regresyona fazladan bir gecikme eklemek (<em>lag augmentation</em>) bu düzeltme ihtiyacını
+  tamamen ortadan kaldırıyor ve çıkarım hem durağan hem durağan olmayan veride geçerli
+  oluyor. Tabloyu o yöntemle yeniden kurdum. İlginç olan şu: sonuç <em>zayıflamadı,
+  güçlendi</em> — altı aylık farkın t değeri 2,05'ten 2,92'ye çıktı.<sup>5</sup></p>
+
+  <figure>
+    <div class="cerceve">
+      <p class="gbas">Aynı kur şoku, artık çok daha fazla fiyata dönüşüyor</p>
+      <p class="galt">Kurdaki %1 artışın TÜFE'ye kümülatif etkisi (puan), şoktan sonraki
+      aylara göre. Üçüncü ayda: 0,09 → 0,28 → 0,77. Gölgeli alan ±1 standart hata.</p>
+      <svg id="gecis" viewBox="0 0 700 280" role="img"
+           aria-label="Kur geçişkenliği eğrileri: üçüncü ayda 2002-2013 döneminde 0,09 puan; 2014-2021'de 0,28; 2021 Eylül sonrasında 0,77 puan"></svg>
+      <p class="gkaynak">Gecikme-artırımlı yerel projeksiyon (Montiel Olea &amp; Plagborg-Møller 2021) ·
+      HC1 standart hatalar · 5 gecikme</p>
+    </div>
+  </figure>
+
+  <div class="tesst">
+    <h3>Ölçemediğim şey</h3>
+    <p>Sık sorulan bir soru var: <em>faiz artışı kuru düşürür mü?</em> Bu veriyle
+    cevaplayamam, ve nedenini göstermek istiyorum.</p>
+    <p>Ham hesap yapınca faiz artışından sonra kurun <em>yükseldiği</em> çıkıyor. Ama bu,
+    faizin kuru yükselttiği anlamına gelmez. Şu üç korelasyona bakın: faiz değişimi ile
+    aynı ayın kur değişimi <span class="mono">+0,23</span>; <em>önceki</em> ayın kur
+    değişimiyle <span class="mono">+0,27</span>; önceki üç ayın kur hareketiyle
+    <span class="mono">+0,28</span>.</p>
+    <p>Yani <strong>kur önce hareket ediyor, faiz sonra değişiyor.</strong> Merkez bankası
+    kura tepki veriyor. Bu durumda "faiz arttı, sonra kur yükseldi" gözlemi nedensellik
+    değil, sıralamadır. Doğru cevap için politika şoklarını ayrıştıran bir yönteme ihtiyaç
+    var; bu projede o yok, dolayısıyla buraya bir rakam yazmıyorum.</p>
+  </div>
+
+  <h2>Peki <span>neden</span> önemli?</h2>
+  <p>Reel faiz negatifken paranızı bankada tutmak sizi fakirleştirir. İnsanlar da bunu
+  yapmaz: dövize, altına, konuta, ne bulurlarsa ona geçerler. Bu yüzden negatif reel faiz
+  dönemleri kurun ve varlık fiyatlarının fırladığı dönemlerdir. İlk bulgumuzda gördüğümüz
+  2023 kur hareketi de tam bu dönemin sonuna denk gelir.</p>
+  <p>Bir de şu var: faiz indirimi tek başına iyi ya da kötü haber değildir. Gazetede
+  "faiz indirildi" başlığını gördüğünüzde sorulacak soru şudur — <strong>enflasyon ne
+  yapıyor?</strong> Altı örnekte cevap "düşüyor"du. Bir örnekte değildi, ve o örnek
+  diğer altısının toplamından daha çok konuşuldu.</p>
+
+  <div class="iddia">
+    <div class="evet">
+      <h3>Söylediğim</h3>
+      <p>Yedi faiz indirimi döngüsünün altısında enflasyon düşüyor ya da sabitti. Biri —
+      2021–2023 — bu düzenin dışında kaldı ve reel faizi yirmi yılın en dibinin on dört
+      katı aşağı çekti.</p>
+    </div>
+    <div class="hayir">
+      <h3>Söylemediğim</h3>
+      <p>Bu kararların hangi gerekçeyle alındığı. Ve "hızlı artırır, yavaş indirir" —
+      test ettim, veri taşımadı.</p>
+    </div>
+  </div>
+
+  <div class="tesst">
+    <h3>Geri çektiğim bir sonuç</h3>
+    <p>Bu bölümün ilk sürümünde her döneme ait "Taylor katsayıları" vardı: merkez bankasının
+    enflasyondaki her 1 puanlık artışa kaç puan faizle karşılık verdiği. Rakamlar düzgün bir
+    hikâye anlatıyordu.</p>
+    <p>Sonra varsayımları denetledim ve o regresyonların <strong>sahte regresyon</strong>
+    olduğunu gördüm. Hem faiz hem enflasyon birim köke sahip seriler, aralarında eşbütünleşme
+    de yok. Böyle iki seriyi seviye halinde regresyona sokunca, hiçbir gerçek ilişki olmasa
+    bile yüksek ve "anlamlı" katsayılar çıkar. Durbin-Watson istatistikleri 0,13 ile 0,47
+    arasındaydı — 2 olması gerekirken.<sup>6</sup></p>
+    <p>Fark formunda yeniden tahmin ettim. Hikâye tamamen kaybolmuyor: 2002–2005'te tepki
+    katsayısı <span class="mono">0,69</span>, 2018–2021'de <span class="mono">0,70</span>,
+    2021–2023'te <span class="mono">−0,01</span>, 2023 sonrasında <span class="mono">0,32</span>.
+    Ama "Taylor ilkesi sağlanıyor" gibi bir hüküm artık veremem — o kavram seviye katsayısına
+    aittir ve o katsayılar geçersiz.</p>
+    <p>Geri çekmeyi bir kez daha sınadım, çünkü mümkün bir itiraz vardı: yapısal bir kırılma
+    da bir seriyi birim kök gibi gösterebilir. Yani belki seriler aslında durağandı, ben
+    kırılmaları hesaba katmadığım için birim kök sandım. Kırılmaya <em>izin veren</em> bir
+    birim kök testi (Zivot-Andrews) uyguladım: politika faizi, reel faiz, REDK ve reel bütçe
+    dengesi kırılma izniyle de birim kök olmaktan kurtulamıyor. Reddedilen dört seride ise
+    testin işaret ettiği kırılma tarihi, Bai-Perron'un bulduğu tarihlerin <em>hiçbiriyle</em>
+    örtüşmüyor. Yani geri çekme yerinde.<sup>7</sup></p>
+    <p>Bunu silmek yerine yazıyorum, çünkü bir analizin en kırılgan yeri genellikle en düzgün
+    görünen tablosudur.</p>
+  </div>
+
+  <div class="dipnot">
+    <h2>Dipnotlar ve yöntem</h2>
+    <ol>
+      <li><b>Reel faiz.</b> Ex-post tanım: politika faizi eksi gerçekleşen yıllık TÜFE
+      enflasyonu. Dip nokta <span class="mono">−75,4</span> (Kasım 2022); 2002–2021 arasındaki
+      en düşük değer <span class="mono">−5,4</span>. <span class="mono">−20</span>'nin altında
+      kalınan süre: 28 ay (Aralık 2021 – Haziran 2024). Beklentiye dayalı (ex-ante) reel faiz
+      de hesaplandı ancak beklenti anketi 2013'te başladığı için tüm dönemi kapsamıyor.</li>
+      <li><b>Döngü tarihleme.</b> Politika faizi serisinde dönüm noktaları, en az 3 ay süre ve
+      en az 2 puan genlik filtresiyle belirlendi. 13 döngü: 6 sıkılaşma (ortalama 14,0 ay,
+      +13,7 puan), 7 gevşeme (ortalama 29,9 ay, −14,6 puan). Asimetri testi (20.000 permütasyon):
+      süre <span class="mono">p=0,202</span>, hız <span class="mono">p=0,385</span> — anlamlı değil.</li>
+      <li><b>Faiz tepkisi (düzeltilmiş).</b> Seviye regresyonları sahte regresyon olduğu için
+      geri çekildi. Fark formunda <span class="mono">Δi = a + b·Δenflasyon + c·Δsanayi</span>,
+      HAC(6): <span class="mono">2002–05: b=0,69 (t=4,06) · 2006–10: 0,18 (t=1,83) ·
+      2011–17: 0,04 (t=1,40) · 2018–21: 0,70 (t=3,41) · 2021–23: −0,01 (t=−0,61) ·
+      2023–26: 0,32 (t=2,33)</span>. AOFM ile ölçülen 2011–2017 dönemi de fark formunda
+      <span class="mono">0,05 (t=0,80)</span> veriyor; seviyede görülen AOFM farkı da sahte
+      regresyonun ürünüydü.</li>
+      <li><b>Kayan korelasyon.</b> 24 aylık pencere, politika faizi ile yıllık TÜFE.
+      260 gözlemin 213'ü pozitif (%82). Negatif dönemler: 2010-12–2011-05 (6 ay),
+      2012-03–2013-03 (13 ay), 2022-05–2024-01 (21 ay).</li>
+      <li><b>Kur geçişkenliği (gecikme-artırımlı).</b> Montiel Olea &amp; Plagborg-Møller
+      (2021, <i>Econometrica</i>): yerel projeksiyon regresyonuna fazladan bir gecikme eklemek,
+      standart hataların seri korelasyon için düzeltilmesi ihtiyacını ortadan kaldırır; çıkarım
+      hem durağan hem durağan olmayan veride ve geniş bir ufuk aralığında asimptotik olarak
+      geçerlidir. Spesifikasyon: <span class="mono">lnP<sub>t+h</sub> = a + b<sub>h</sub>·Δlne<sub>t</sub>
+      + Σ<sub>j=1..5</sub>(c<sub>j</sub>·lnP<sub>t−j</sub> + d<sub>j</sub>·Δlne<sub>t−j</sub>)</span>,
+      HC1 standart hata (HAC <i>değil</i>). Sonuçlar (b, parantezde t):
+      <span class="mono">h=3 → 2002–2013: 0,09 (1,5) · 2014–2021: 0,28 (5,9) · 2021-09+: 0,77 (3,6);
+      h=6 → 0,10 (1,2) · 0,28 (3,3) · 0,71 (2,7); h=12 → 0,09 (1,1) · 0,26 (2,5) · 0,36 (1,2)</span>.
+      Gözlem sayısı 138 / 86 / 54.
+      Dönemler arası farkın doğrudan testi (etkileşimli tahmin, taban 2002–2013): h=3'te 2021+ farkı
+      <span class="mono">+0,79 (t=3,42)</span>, h=6'da <span class="mono">+0,95 (t=2,92)</span>,
+      h=12'de <span class="mono">+1,10 (t=1,93)</span>; 2014–2021 farkı sırasıyla
+      <span class="mono">+0,62 (3,50) · +0,75 (2,71) · +0,84 (2,29)</span>.
+      <b>Önceki versiyon.</b> Bu tablo ilk yayında klasik Jordà (2005) projeksiyonu ve
+      Newey-West (h+2) standart hatalarıyla kurulmuştu; 12 ay ufkunda 0,19 · 0,33 · 0,72 ve
+      fark testi h=6'da t=2,05, h=12'de t=1,21 veriyordu. Nokta tahminler bir miktar düştü,
+      fakat fark testi <i>güçlendi</i>. Yöntemi değiştirme gerekçesi: seriler I(1) ve uzun ufukta
+      pencereler örtüşüyor — HAC'ın bu birleşim altında bilinen boyut sorunu var.</li>
+      <li><b>Sahte regresyon denetimi.</b> ADF ve KPSS birlikte, on serinin sekizinde birim kök
+      buldu (politika faizi, yıllık TÜFE, reel faiz, REDK, kredi büyümesi, AOFM, reel bütçe
+      dengesi, aylık TÜFE). Seviye Taylor regresyonlarında Durbin-Watson 0,13–0,47, Ljung-Box
+      p=0,0000, eşbütünleşme p=0,33–0,83. Dört dönemde sahte regresyon teşhisi kondu; katsayılar
+      geri çekildi. Ayrıca Bai-Perron kırılma tarihleri de AR(1) ön-beyazlatma sonrası ayakta
+      kalmıyor (bölümlenmiş artıkların AR(1) katsayısı politika faizinde 0,96) — yalnızca kur
+      oynaklığındaki 2022 kırılması kalıyor, ki o da durağan çıkan iki seriden biri.</li>
+      <li><b>Kırılmaya izin veren birim kök testi (ek denetim).</b> Perron (1989): yapısal
+      kırılma bir seriyi birim kök gibi gösterebilir, standart ADF/KPSS ikisini ayıramaz —
+      yani yukarıdaki geri çekme fazla sert olabilirdi. Zivot-Andrews testi bunu sınar
+      (H<sub>0</sub>: kırılmasız birim kök, H<sub>1</sub>: kırılmalı durağan). Sonuç:
+      <span class="mono">politika faizi p=0,122 · reel faiz p=0,862 · REDK p=0,683 ·
+      reel bütçe p=0,150</span> — kırılmaya izin verilse bile birim kök reddedilemiyor.
+      Reddedilen dört seri: <span class="mono">yıllık TÜFE p=0,008 (2004-04) · kredi büyümesi
+      p=0,009 (2009-11) · AOFM p=0,000 (2011-03) · kur oynaklığı p=0,000 (2002-03)</span>.
+      Ama bu dört tarihin <i>hiçbiri</i> Bai-Perron'un bulduğu tarihlerle ±9 ay içinde
+      örtüşmüyor (örn. politika faizi: ZA 2002-05'e işaret ediyor, Bai-Perron 2005-10 /
+      2009-06 / 2018-06 / 2022-12). Yani geri çekme yerinde: kırılmalar ya yok ya da
+      Bai-Perron'un koyduğu yerde değil. (Sınır: ZA kırılmayı yalnızca alternatif hipotez
+      altında kabul eder; Lee-Strazicich H<sub>0</sub> altında da kabul eder ve boyut
+      özellikleri daha iyidir — kritik değerleri hazır kütüphanede olmadığı için
+      uygulanmadı.)</li>
+    </ol>
+    <p style="margin-top:14px"><b>Veri:</b> TCMB EVDS. Politika faizi <span class="mono">TP.BISPOLFAIZ.TUR</span>
+    (BIS derlemesi, 2002-02'den kesintisiz), fonlama maliyeti <span class="mono">TP.APIFON4</span>
+    (2011'den), TÜFE <span class="mono">TP.GENENDEKS.T1</span> ile 1994=100 arşiv serisinden zincirlenmiş.</p>
+  </div>
+</div>
+<div class="ipucu" id="ipucu"></div>
+
+<script>
+const D_DONGU=[
+ ["2002-02 – 2006-05","−43,8 puan",-16.5],
+ ["2007-08 – 2013-12","−13,0 puan",0.0],
+ ["2014-04 – 2016-10","−2,5 puan",-2.2],
+ ["2019-06 – 2020-08","−15,8 puan",-3.9],
+ ["2021-08 – 2023-05","−10,5 puan",20.3],
+ ["2024-11 – 2025-03","−7,5 puan",-9.0],
+ ["2025-06 – 2026-07","−9,0 puan",-3.3]];
+const KOR_BAS=[2004,12], KOR=[0.964,0.958,0.952,0.941,0.922,0.885,0.823,0.751,0.665,0.582,0.547,0.477,0.343,0.166,0.045,0.034,0.033,0.05,0.253,0.382,0.496,0.638,0.678,0.734,0.752,0.767,0.794,0.825,0.839,0.82,0.783,0.642,0.548,0.462,0.404,0.359,0.314,0.279,0.23,0.169,0.13,0.177,0.134,0.067,0.04,0.011,-0.001,-0.026,-0.05,-0.039,0.117,0.187,0.337,0.485,0.578,0.703,0.792,0.872,0.92,0.938,0.942,0.921,0.845,0.796,0.734,0.697,0.672,0.629,0.562,0.471,0.311,0.148,-0.035,-0.188,-0.192,-0.221,-0.143,-0.053,0.053,0.22,0.375,0.491,0.477,0.362,0.231,0.12,0.027,-0.053,-0.144,-0.202,-0.253,-0.282,-0.343,-0.472,-0.602,-0.718,-0.65,-0.572,-0.459,-0.316,0.035,0.209,0.254,0.282,0.297,0.356,0.388,0.397,0.385,0.127,0.076,0.111,0.275,0.372,0.428,0.481,0.525,0.574,0.586,0.601,0.6,0.562,0.537,0.514,0.476,0.409,0.406,0.463,0.483,0.499,0.51,0.481,0.434,0.453,0.542,0.644,0.651,0.62,0.604,0.522,0.434,0.385,0.294,-0.04,-0.031,0.209,0.391,0.525,0.608,0.661,0.686,0.685,0.695,0.709,0.714,0.713,0.73,0.759,0.769,0.755,0.728,0.686,0.585,0.705,0.796,0.9,0.936,0.954,0.957,0.959,0.956,0.954,0.953,0.948,0.922,0.916,0.902,0.859,0.839,0.844,0.85,0.846,0.839,0.832,0.833,0.841,0.834,0.835,0.839,0.843,0.857,0.849,0.835,0.818,0.795,0.769,0.735,0.695,0.707,0.704,0.725,0.812,0.847,0.818,0.487,0.291,0.196,0.121,0.043,-0.038,-0.127,-0.245,-0.433,-0.624,-0.842,-0.875,-0.848,-0.815,-0.776,-0.718,-0.64,-0.543,-0.496,-0.426,-0.238,-0.086,-0.025,-0.011,-0.005,-0.003,0.009,0.033,0.072,0.142,0.203,0.23,0.234,0.267,0.354,0.496,0.502,0.482,0.453,0.421,0.335,0.198,0.032,-0.03,0.06,0.256,0.472,0.616,0.712,0.755,0.8,0.796,0.789,0.81,0.859,0.895];
+const REEL_BAS=[2003,1], REEL=[17.6,17.9,16.9,15.2,14.8,12.4,11.4,10.9,10.4,10.1,11.9,13.3,15.4,14.5,13.6,14.1,14.7,14.9,14.2,13.6,12,10.6,10.5,8.6,7.8,7.8,7.6,6.8,5.8,5.3,6.4,6.3,6.3,6.5,6.1,5.8,5.6,5.4,5.3,4.4,3.4,7.1,5.8,7.2,7,7.5,7.6,7.8,7.6,7.3,6.6,6.8,8.3,8.9,10.6,10.1,10.1,9.1,7.9,7.4,7.3,6.1,6.1,5.6,5,5.6,4.7,5,5.6,4.8,5.5,4.9,3.5,3.8,2.6,3.6,4,3,2.9,2.4,2,1.7,1,0,-1.7,-3.6,-3.1,-3.7,-2.1,-1.4,-0.6,-1.3,-2.2,-1.6,-0.3,0.1,1.3,2.1,2.3,2,-0.9,0,-0.1,-0.9,-0.4,-1.9,-3.7,-4.7,-4.9,-4.7,-4.7,-5.4,-2.5,-3.1,-3.3,-3.1,-3.4,-2,-0.6,-0.7,-1.8,-1.5,-1.8,-1.1,-2,-3.8,-4.4,-3.7,-3.4,-3.2,-2.8,-2.9,2.2,2.1,1.6,0.6,-0.2,-0.4,-1.1,-1.3,-0.6,-0.7,-0.9,0.1,0.5,0,-0.1,-0.4,-0.6,0.3,0.7,0.4,-0.4,-0.1,-0.6,-1.3,-2.1,-1.3,0,0.9,0.9,-0.1,-1.3,-0.5,0.2,0.3,1,-0.5,-1.2,-2.1,-3.3,-3.9,-3.7,-2.9,-1.8,-2.7,-3.2,-3.9,-5,-3.9,-2.3,-2.3,-2.2,-2.8,-4.1,2.4,1.9,-0.1,-0.5,-1.2,2.4,3.7,3.6,4.3,4.3,4.5,5.3,8.3,3.1,4.7,7.2,5.4,3.4,0.2,-0.9,-1.6,-2.1,-2.2,-3.1,-4.4,-3.5,-3.5,-1.5,-1.6,1,2.4,2,1.4,2.8,1.9,2.4,1.5,0,-0.3,-1.6,-3.9,-6.3,-22.1,-34.7,-40.4,-47.1,-56,-59.5,-64.6,-65.6,-67.2,-71.5,-75,-75.4,-55.3,-48.7,-46.7,-42,-35.2,-31.1,-23.2,-30.3,-33.9,-31.5,-26.4,-22,-22.3,-19.9,-22.1,-18.5,-19.8,-25.4,-21.6,-11.8,-2,0.6,1.4,2.9,3.1,2.9,5.9,4.4,8.1,10.6,11,9.5,10,7.2,6.6,8.4,7.1,6.4,5.5,6.1,4.6,4.4,4.9,5.3];
+const NS="http://www.w3.org/2000/svg",ip=document.getElementById("ipucu");
+const SANS="font-family:var(--sans);",MONO="font-family:var(--mono);";
+function el(p,t,a,s){const n=document.createElementNS(NS,t);for(const k in a)n.setAttribute(k,a[k]);
+  if(s)n.setAttribute("style",s);p.appendChild(n);return n;}
+function yaz(p,x,y,t,s,anc){const n=el(p,"text",{x:x,y:y},s);if(anc)n.setAttribute("text-anchor",anc);n.textContent=t;return n;}
+const tr=(v,b)=>v.toLocaleString("tr-TR",{minimumFractionDigits:b,maximumFractionDigits:b});
+function ayAdi(bas,i){const AY=["Oca","Şub","Mar","Nis","May","Haz","Tem","Ağu","Eyl","Eki","Kas","Ara"];
+  let m=bas[1]-1+i, y=bas[0]+Math.floor(m/12); return AY[m%12]+" "+y;}
+function tut(s,i,metin,X,T,H,B,w){const r=el(s,"rect",{x:X-w/2,y:T,width:w,height:H-T-B,fill:"transparent"});
+  r.style.cursor="crosshair";
+  r.addEventListener("mousemove",e=>{ip.innerHTML=metin;ip.style.opacity=1;
+    ip.style.left=Math.min(e.clientX+16,innerWidth-170)+"px";ip.style.top=Math.max(e.clientY-44,8)+"px";});
+  r.addEventListener("mouseleave",()=>ip.style.opacity=0);}
+
+/* ---- 1. yedi döngü ---- */
+(function(){
+  const s=document.getElementById("donguler"),W=700,H=290,L=208,R=56,T=30,B=34;
+  const mn=-12,mx=24, x=v=>L+(v-mn)*(W-L-R)/(mx-mn), y=i=>T+i*(H-T-B-10)/6;
+  [-10,0,10,20].forEach(v=>{
+    el(s,"line",{x1:x(v),x2:x(v),y1:T-10,y2:H-B},
+      "stroke:var(--ince);stroke-width:1");
+    yaz(s,x(v),H-B+18,(v>0?"+":"")+v,MONO+"font-size:10px;fill:var(--soluk)","middle");
+  });
+  yaz(s,x(0),T-18,"enflasyondaki değişim (puan)",SANS+"font-size:10.5px;font-weight:600;fill:var(--soluk)","middle");
+  D_DONGU.forEach(([ad,faiz,e],i)=>{
+    const son=i===4, renk=son?"var(--isaret)":"var(--piyasa)";
+    const x0=x(0),x1=x(e), h=15;
+    el(s,"rect",{x:Math.min(x0,x1),y:y(i)-h/2,width:Math.max(Math.abs(x1-x0),1.5),height:h,rx:2},
+      "fill:"+renk+";opacity:"+(son?"1":".72"));
+    yaz(s,L-96,y(i)+4,ad,SANS+"font-size:11.5px;font-weight:"+(son?"700":"400")+
+      ";fill:"+(son?"var(--isaret)":"var(--murekkep)"),"end");
+    yaz(s,L-8,y(i)+4,faiz,MONO+"font-size:11px;fill:var(--soluk)","end");
+    yaz(s,x1+(e>=0?7:-7),y(i)+4,(e>0?"+":"")+tr(e,1),
+      MONO+"font-size:11.5px;font-weight:"+(son?"600":"400")+";fill:"+(son?"var(--isaret)":"var(--soluk)"),
+      e>=0?"start":"end");
+    tut(s,i,"<b>"+ad+"</b><br>faiz "+faiz+"<br>enflasyon "+(e>0?"+":"")+tr(e,1)+" puan",
+      (L+W-R)/2,y(i)-11,y(i)+11,0,W-L-R+90);
+  });
+  el(s,"line",{x1:x(0),x2:x(0),y1:T-10,y2:H-B},"stroke:var(--murekkep);stroke-width:1.4");
+  yaz(s,x(20)+2,y(4)-16,"tek istisna",SANS+"font-size:11px;font-weight:700;fill:var(--isaret)","end");
+})();
+
+/* ---- çizgi/alan grafiği ---- */
+function cizgi(id,veri,bas,opt){
+  const s=document.getElementById(id);
+  const vb=s.getAttribute("viewBox").split(" ").map(Number),W=vb[2],H=vb[3];
+  const L=opt.L,R=14,T=opt.T||22,B=32, n=veri.length;
+  const x=i=>L+i*(W-L-R)/(n-1), y=v=>T+(opt.hi-v)*(H-T-B)/(opt.hi-opt.lo), s0=y(0);
+  const df=el(s,"defs",{});
+  ["p","n"].forEach((k,j)=>{const g=el(df,"linearGradient",{id:id+k,x1:0,y1:0,x2:0,y2:1});
+    el(g,"stop",{offset:"0%","stop-color":j?"var(--isaret)":"var(--piyasa)","stop-opacity":j?".05":".3"});
+    el(g,"stop",{offset:"100%","stop-color":j?"var(--isaret)":"var(--piyasa)","stop-opacity":j?".3":".05"});});
+  opt.tik.forEach(v=>{el(s,"line",{x1:L,x2:W-R,y1:y(v),y2:y(v)},"stroke:var(--ince);stroke-width:1");
+    yaz(s,L-8,y(v)+3.5,opt.et(v),MONO+"font-size:10px;fill:var(--soluk)","end");});
+  if(opt.ref!==undefined){
+    el(s,"line",{x1:L,x2:W-R,y1:y(opt.ref),y2:y(opt.ref)},
+      "stroke:var(--murekkep);stroke-width:1;stroke-dasharray:4 3;opacity:.65");
+    yaz(s,W-R,y(opt.ref)-7,opt.refEt,SANS+"font-size:10.5px;font-weight:600;fill:var(--murekkep)","end");
+  }
+  let d="M "+x(0)+" "+y(veri[0]); for(let i=1;i<n;i++) d+=" L "+x(i)+" "+y(veri[i]);
+  el(s,"path",{d:d+" L "+x(n-1)+" "+s0+" L "+x(0)+" "+s0+" Z",fill:"url(#"+id+"p)"});
+  // negatif bölgeyi ayrı boya
+  el(s,"clipPath",{id:id+"c"}).appendChild(
+    (()=>{const r=document.createElementNS(NS,"rect");r.setAttribute("x",L);r.setAttribute("y",s0);
+      r.setAttribute("width",W-L-R);r.setAttribute("height",Math.max(H-B-s0,0));return r;})());
+  el(s,"path",{d:d+" L "+x(n-1)+" "+s0+" L "+x(0)+" "+s0+" Z",fill:"url(#"+id+"n)","clip-path":"url(#"+id+"c)"});
+  el(s,"line",{x1:L,x2:W-R,y1:s0,y2:s0},"stroke:var(--murekkep);stroke-width:1.3");
+  el(s,"path",{d:d,fill:"none"},"stroke:var(--piyasa);stroke-width:1.8;stroke-linejoin:round");
+  (opt.isaret||[]).forEach(([i,ad,dy])=>{
+    el(s,"circle",{cx:x(i),cy:y(veri[i]),r:3.6},"fill:var(--isaret);stroke:var(--kart);stroke-width:1.6");
+    yaz(s,x(i)+8,y(veri[i])+(dy||4),ad,SANS+"font-size:11px;font-weight:600;fill:var(--isaret)");
+  });
+  (opt.eksenX||[]).forEach(i=>yaz(s,x(i),H-B+18,ayAdi(bas,i).split(" ")[1],
+    MONO+"font-size:10px;fill:var(--soluk)","middle"));
+  const w=(W-L-R)/(n-1);
+  for(let i=0;i<n;i++) tut(s,i,"<b>"+ayAdi(bas,i)+"</b>&nbsp;&nbsp;"+opt.ip(veri[i]),x(i),T,H,B,Math.max(w,3));
+}
+
+cizgi("reel",REEL,REEL_BAS,{L:44,lo:-82,hi:22,tik:[-75,-50,-25,0,20],et:v=>tr(v,0),
+  ref:-5.4,refEt:"2002–2021'in en düşüğü: −5,4",
+  isaret:[[238,"Kasım 2022: −75,4",-8]],
+  eksenX:[0,60,120,180,240,284], ip:v=>"%"+tr(v,1)});
+cizgi("kor",KOR,KOR_BAS,{L:44,lo:-1.05,hi:1.05,tik:[-1,-0.5,0,0.5,1],et:v=>tr(v,1),
+  isaret:[[221,"Ekim 2022: −0,88",14]],
+  eksenX:[0,48,96,144,192,240], ip:v=>tr(v,2)});
+
+/* ---- geçişkenlik eğrileri ---- */
+(function(){
+  const G={
+   d1:{ad:"2002–2013",dy:12,b:[0.042,0.065,0.071,0.088,0.096,0.114,0.103,0.077,0.088,0.080,0.049,0.065,0.090],
+        se:[0.026,0.036,0.051,0.060,0.072,0.076,0.085,0.087,0.095,0.093,0.094,0.095,0.086]},
+   d2:{ad:"2014–2021",dy:0,b:[0.084,0.223,0.305,0.278,0.263,0.303,0.276,0.246,0.252,0.230,0.228,0.284,0.264],
+        se:[0.019,0.048,0.061,0.047,0.066,0.081,0.084,0.074,0.077,0.082,0.092,0.098,0.105]},
+   d3:{ad:"2021 Eylül sonrası",dy:-16,b:[0.074,0.436,0.674,0.768,0.730,0.701,0.708,0.793,0.813,0.700,0.605,0.544,0.362],
+        se:[0.063,0.120,0.219,0.213,0.222,0.268,0.264,0.339,0.364,0.389,0.351,0.356,0.310]}};
+  const s=document.getElementById("gecis"),W=700,H=280,L=48,R=150,T=24,B=34;
+  const n=13, x=i=>L+i*(W-L-R)/(n-1), lo=-0.15, hi=1.3, y=v=>T+(hi-v)*(H-T-B)/(hi-lo);
+  [0,0.25,0.5,0.75,1.0,1.25].forEach(v=>{
+    el(s,"line",{x1:L,x2:W-R,y1:y(v),y2:y(v)},"stroke:var(--ince);stroke-width:1");
+    yaz(s,L-8,y(v)+3.5,tr(v,2),MONO+"font-size:10px;fill:var(--soluk)","end");});
+  el(s,"line",{x1:L,x2:W-R,y1:y(0),y2:y(0)},"stroke:var(--murekkep);stroke-width:1.3");
+  [0,3,6,9,12].forEach(i=>yaz(s,x(i),H-B+18,i+" ay",MONO+"font-size:10px;fill:var(--soluk)","middle"));
+  const renkler={d1:"var(--soluk)",d2:"var(--piyasa)",d3:"var(--isaret)"};
+  ["d1","d2","d3"].forEach(k=>{
+    const g=G[k],c=renkler[k];
+    let ust="M "+x(0)+" "+y(g.b[0]+g.se[0]), alt="";
+    for(let i=1;i<n;i++) ust+=" L "+x(i)+" "+y(g.b[i]+g.se[i]);
+    for(let i=n-1;i>=0;i--) alt+=" L "+x(i)+" "+y(g.b[i]-g.se[i]);
+    el(s,"path",{d:ust+alt+" Z",fill:c},"opacity:.13");
+    let d="M "+x(0)+" "+y(g.b[0]);
+    for(let i=1;i<n;i++) d+=" L "+x(i)+" "+y(g.b[i]);
+    el(s,"path",{d:d,fill:"none"},"stroke:"+c+";stroke-width:2.2;stroke-linejoin:round");
+    el(s,"circle",{cx:x(12),cy:y(g.b[12]),r:4},"fill:"+c+";stroke:var(--kart);stroke-width:1.6");
+    const ly=y(g.b[12])+(g.dy||0);
+    el(s,"line",{x1:x(12)+4.5,x2:x(12)+9,y1:y(g.b[12]),y2:ly-4},"stroke:"+c+";stroke-width:1;opacity:.5");
+    yaz(s,x(12)+11,ly-2,g.ad,SANS+"font-size:11.5px;font-weight:600;fill:"+c);
+    yaz(s,x(12)+11,ly+13,"1 yılda "+tr(g.b[12],2)+" puan",MONO+"font-size:10.5px;fill:var(--soluk)");
+    for(let i=0;i<n;i++) tut(s,i,"<b>"+g.ad+"</b><br>"+i+" ay: "+tr(g.b[i],2)+" puan",x(i),T,H,B,(W-L-R)/(n-1));
+  });
+  /* üçüncü ay: metinde öne çıkan ufuk */
+  el(s,"line",{x1:x(3),x2:x(3),y1:T+2,y2:y(0)},"stroke:var(--soluk);stroke-width:1;stroke-dasharray:2 3;opacity:.55");
+  ["d1","d2","d3"].forEach(k=>el(s,"circle",{cx:x(3),cy:y(G[k].b[3]),r:3},
+    "fill:var(--kart);stroke:"+renkler[k]+";stroke-width:1.8"));
+  el(s,"line",{x1:x(3)+5,x2:x(3)+52,y1:y(G.d3.b[3]),y2:y(G.d3.b[3])-26},"stroke:var(--isaret);stroke-width:1;opacity:.6");
+  yaz(s,x(3)+56,y(G.d3.b[3])-29,"3. ayda 0,77 puan",SANS+"font-size:11px;font-weight:600;fill:var(--isaret)");
+  yaz(s,x(3)+56,y(G.d3.b[3])-17,"(2002–2013'te 0,09)",MONO+"font-size:9.5px;fill:var(--soluk)");
+  yaz(s,L,T-8,"kurdaki %1 artışın TÜFE'ye etkisi (puan)",SANS+"font-size:10.5px;font-weight:600;fill:var(--soluk)");
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Mayıs 2023 seçiminden önceki otuz işlem gününde dolar kuru 27 gün üst üste, neredeyse eşit adımlarla yükseldi. Sekiz seçimin tamamıyla karşılaştırdım.">
+<meta name="author" content="Kağan Onur">
+<meta name="theme-color" content="#F4F3EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141519" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://kaganonur.vercel.app/turkiye-ekonomisi/bulgu-01">
+<link rel="icon" href="/favicon.ico">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kağan Onur">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Seçim Öncesi Merdiven">
+<meta property="og:description" content="Mayıs 2023 seçiminden önceki otuz işlem gününde dolar kuru 27 gün üst üste, neredeyse eşit adımlarla yükseldi. Sekiz seçimin tamamıyla karşılaştırdım.">
+<meta property="og:url" content="https://kaganonur.vercel.app/turkiye-ekonomisi/bulgu-01">
+<meta property="og:image" content="https://kaganonur.vercel.app/turkiye-ekonomisi/og/bulgu-01.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<title>Seçim Öncesi Merdiven</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --kagit:#F4F3EF; --kart:#FBFAF8; --murekkep:#15171B; --soluk:#6E7079;
+  --cizgi:#DDDBD4; --ince:#EAE8E2;
+  --piyasa:#3F6E8C; --piyasa-ac:#3F6E8C22; --piyasa-sis:#3F6E8C0D;
+  --isaret:#B5391C; --isaret-ac:#B5391C22; --isaret-sis:#B5391C0D;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+  --kagit:#141519; --kart:#1A1C21; --murekkep:#F1F0EA; --soluk:#9A9CA4;
+  --cizgi:#30333A; --ince:#24272C;
+  --piyasa:#79ACCA; --piyasa-ac:#79ACCA2E; --piyasa-sis:#79ACCA14;
+  --isaret:#E4714A; --isaret-ac:#E4714A2E; --isaret-sis:#E4714A14;
+}}
+:root[data-theme="dark"]{
+  --kagit:#141519; --kart:#1A1C21; --murekkep:#F1F0EA; --soluk:#9A9CA4;
+  --cizgi:#30333A; --ince:#24272C;
+  --piyasa:#79ACCA; --piyasa-ac:#79ACCA2E; --piyasa-sis:#79ACCA14;
+  --isaret:#E4714A; --isaret-ac:#E4714A2E; --isaret-sis:#E4714A14;
+}
+*{box-sizing:border-box}
+body{background:var(--kagit); color:var(--murekkep); font-family:var(--serif); -webkit-font-smoothing:antialiased}
+.sayfa{max-width:760px;margin:0 auto;padding-inline:20px;padding-block:clamp(34px,6vw,72px)}
+
+.kunye{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.15em;
+       text-transform:uppercase;color:var(--soluk);display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+.kunye i{width:22px;height:2px;background:var(--isaret);display:inline-block;font-style:normal}
+h1{font-weight:500;font-size:clamp(36px,8vw,64px);line-height:1.02;letter-spacing:-.025em;
+   margin:.34em 0 .26em;text-wrap:balance}
+.spot{font-size:clamp(18px,2.4vw,21px);line-height:1.52;font-weight:300;max-width:31em;margin:0 0 6px;color:var(--soluk)}
+hr{height:1px;background:var(--cizgi);border:0;margin:30px 0}
+p{font-size:18px;line-height:1.72;max-width:33em;margin:0 0 1.1em;font-weight:350}
+p.giris{font-size:19.5px;line-height:1.66}
+strong{font-weight:600}
+h2{font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.02em;
+   margin:38px 0 12px;max-width:33em}
+h2 span{color:var(--isaret)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kunye .damga{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:0;
+  text-transform:none;color:var(--soluk);padding:2px 7px;border:1px solid var(--cizgi);
+  border-radius:12px}
+
+
+/* rakam şeridi */
+.vurgu{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:20px;
+       margin:28px 0 32px;padding:20px 0;border-top:2px solid var(--murekkep);border-bottom:1px solid var(--cizgi)}
+.vurgu .rk{font-family:var(--mono);font-size:clamp(25px,4.4vw,32px);font-weight:600;
+           letter-spacing:-.035em;line-height:1;font-variant-numeric:tabular-nums}
+.vurgu .rk.k{color:var(--isaret)}
+.vurgu .bi{font-family:var(--sans);font-size:.46em;font-weight:500;letter-spacing:0}
+.vurgu .ak{font-family:var(--sans);font-size:12px;line-height:1.45;color:var(--soluk);margin-top:9px}
+
+/* figür */
+figure{margin:30px 0 32px}
+.cerceve{background:var(--kart);border:1px solid var(--cizgi);border-radius:4px;padding:18px 18px 12px}
+.cerceve + .cerceve{margin-top:12px}
+.gbas{font-family:var(--sans);font-size:14px;font-weight:600;margin:0 0 3px;letter-spacing:-.005em}
+.galt{font-family:var(--sans);font-size:12.5px;color:var(--soluk);margin:0 0 14px;line-height:1.45;max-width:46em}
+.gkaynak{font-family:var(--sans);font-size:10.5px;color:var(--soluk);margin-top:9px;
+         padding-top:8px;border-top:1px solid var(--ince);letter-spacing:.01em}
+svg{display:block;width:100%;height:auto;overflow:visible}
+figcaption{font-family:var(--sans);font-size:12.5px;line-height:1.55;color:var(--soluk);margin-top:11px;max-width:40em}
+
+.ipucu{position:fixed;pointer-events:none;opacity:0;transition:opacity .08s;
+       background:var(--murekkep);color:var(--kagit);font-family:var(--mono);font-size:11.5px;
+       line-height:1.5;padding:7px 10px;border-radius:3px;z-index:9;white-space:nowrap;
+       box-shadow:0 4px 18px rgba(0,0,0,.22)}
+
+/* iddia */
+.iddia{display:grid;grid-template-columns:1fr;margin:34px 0;border:1px solid var(--cizgi);
+       border-radius:4px;overflow:hidden}
+@media(min-width:620px){.iddia{grid-template-columns:1fr 1fr}}
+.iddia>div{padding:20px 20px 22px;background:var(--kart)}
+.iddia>div+div{border-top:1px solid var(--cizgi)}
+@media(min-width:620px){.iddia>div+div{border-top:0;border-left:1px solid var(--cizgi)}}
+.iddia h3{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.12em;
+          text-transform:uppercase;margin:0 0 10px}
+.evet h3{color:var(--piyasa)} .hayir h3{color:var(--isaret)}
+.iddia p{font-size:16px;line-height:1.6;margin:0;max-width:none}
+
+.kapanis{border-left:3px solid var(--isaret);padding:2px 0 2px 18px;margin:32px 0}
+.kapanis p{margin:0;font-size:17px;line-height:1.65}
+
+.dipnot{margin-top:46px;padding-top:20px;border-top:1px solid var(--cizgi)}
+.dipnot h2{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.14em;
+           text-transform:uppercase;color:var(--soluk);margin:0 0 14px}
+.dipnot p,.dipnot li{font-family:var(--sans);font-size:12.5px;line-height:1.62;color:var(--soluk);max-width:44em}
+.dipnot ol{padding-left:18px;margin:0}.dipnot li{margin-bottom:10px}
+.dipnot b{color:var(--murekkep)}
+sup{font-family:var(--sans);font-size:10px;font-weight:600;color:var(--isaret);
+    vertical-align:super;line-height:0;margin-left:1px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* ---- üst şerit: portfolyoya dönüş ve bölümler arası geçiş ---- */
+.ustserit{border-bottom:1px solid var(--cizgi);background:var(--kart)}
+.us-ic{max-width:940px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;
+  gap:10px 20px;flex-wrap:wrap}
+.us-logo{font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:-.01em;
+  color:var(--murekkep);text-decoration:none;margin-right:auto;display:flex;align-items:center;gap:8px}
+.us-logo b{width:16px;height:2px;background:var(--isaret);display:inline-block}
+.us-nav{display:flex;gap:4px;flex-wrap:wrap}
+.us-nav a{font-family:var(--sans);font-size:12px;font-weight:500;color:var(--soluk);
+  text-decoration:none;padding:4px 9px;border-radius:14px;transition:color .12s,background .12s}
+.us-nav a:hover{color:var(--murekkep);background:var(--ince)}
+.us-nav a[aria-current="page"]{color:var(--murekkep);font-weight:600;background:var(--ince)}
+.us-nav a.disari{color:var(--piyasa);font-weight:600}
+</style>
+</head>
+<body>
+<div class="ustserit"><div class="us-ic"><a class="us-logo" href="/"><b></b>Kağan Onur</a><nav class="us-nav"><a href="/turkiye-ekonomisi">Genel bakış</a><a href="/turkiye-ekonomisi/bulgu-01" aria-current="page">01 Merdiven</a><a href="/turkiye-ekonomisi/bulgu-02">02 Takvim</a><a href="/turkiye-ekonomisi/bulgu-03">03 Faiz</a><a href="/turkiye-ekonomisi/bulgu-04">04 Karar günü</a><a href="/turkiye-ekonomisi/gezgin">Veri gezgini</a><a class="disari" href="/">Portfolyo →</a></nav></div></div>
+<div class="sayfa">
+
+  <div class="kunye"><i></i>Türkiye Ekonomisi · Bulgu 01 · Döviz kuru<span class="damga">Veri son güncelleme: 20 Eyl 2026</span></div>
+  <h1>Seçim öncesi merdiven</h1>
+  <p class="spot">Bir grafik bazen bir cümleden daha net konuşur. Mayıs 2023'te dolar kuru,
+  otuz gün boyunca bir piyasaya benzemeyi bıraktı.</p>
+
+  <hr>
+
+  <p class="giris">Türkiye'de dolar kuruna bakmak, neredeyse hava durumuna bakmak gibidir.
+  Her gün bir rakam vardır ve her gün biraz farklıdır. Bazen yukarı, bazen aşağı —
+  çünkü o rakamı belirleyen şey, dolar almak isteyenle satmak isteyenin anlaşamamasıdır.
+  Anlaşamadıkları için fiyat oynar. Oynadığı için de size bir şey anlatır.</p>
+
+  <p>Şimdi size tuhaf bir şey göstereceğim.</p>
+
+  <p>14 Mayıs 2023 seçiminden önceki otuz işlem gününde kur yükseldi. Ama her gün,
+  neredeyse tıpatıp aynı miktarda yükseldi. <strong>Yirmi yedi gün üst üste yukarı.
+  Bir gün aşağı</strong> — o da 0,29 kuruş. Yani bir liranın yaklaşık üç yüzde biri kadar.
+  Bir gün de hiç kıpırdamadı.</p>
+
+  <div class="vurgu">
+    <div><div class="rk k">27<span class="bi">&thinsp;/&thinsp;29</span></div>
+         <div class="ak">Kurun yükseldiği gün sayısı<br>(seçim öncesi 30 işlem günü)</div></div>
+    <div><div class="rk">1,5<span class="bi"> kuruş</span></div>
+         <div class="ak">Günlük ortalama hareket,<br>kur 19,4 lirayken</div></div>
+    <div><div class="rk">%2,3</div>
+         <div class="ak">Otuz gündeki toplam artış</div></div>
+  </div>
+
+  <p>Normal bir kur grafiği sismograf kaydına benzer: inişli çıkışlı, tırtıklı, huzursuz.
+  Bu ise bir merdiven. Aşağıdaki çizimde her basamak bir işlem günü — ve soldaki otuz
+  basamağın hepsi aynı yöne, aynı yükseklikte.</p>
+
+  <figure>
+    <div class="cerceve">
+      <p class="gbas">Otuz gün sessizlik, sonra otuz gün gürültü</p>
+      <p class="galt">USD/TRY döviz alış kuru, 14 Mayıs 2023 seçiminin öncesindeki ve
+      sonrasındaki 30'ar işlem günü. Her basamak bir gün.</p>
+      <svg id="ana" viewBox="0 0 700 340" role="img"
+           aria-label="Seçim öncesi otuz gün kur neredeyse yatay bir merdiven çiziyor, seçimden yaklaşık iki hafta sonra sert biçimde yükseliyor"></svg>
+      <p class="gkaynak">Kaynak: TCMB EVDS, TP.DK.USD.A.YTL · Yalnızca işlem günleri</p>
+    </div>
+    <div class="cerceve">
+      <p class="gbas">Yukarıdaki düz çizginin içi</p>
+      <p class="galt">Seçim öncesi son 15 işlem günü, kendi ölçeğinde. Dikey eksen yalnızca
+      20 kuruşluk bir aralığı kapsıyor — bu yüzden basamaklar görünür hâle geliyor.</p>
+      <svg id="buyutec" viewBox="0 0 700 270" role="img"
+           aria-label="Seçim öncesi son on beş işlem günü, her biri yaklaşık bir buçuk kuruşluk eşit basamaklar hâlinde"></svg>
+      <p class="gkaynak">Basamakların üzerine gelin: tarih ve o günkü değişim görünür</p>
+    </div>
+    <figcaption>Üstteki grafikte seçim öncesi bölüm neredeyse düz bir çizgi gibi görünüyor.
+    Alttaki grafik, o çizginin içini açıyor.</figcaption>
+  </figure>
+
+  <h2>Peki bu sadece 2023'e mi özgü?</h2>
+  <p>İyi soru — çünkü "Türkiye'de kur zaten hep yükseliyor" diyerek bunu geçiştirmek mümkün.
+  O yüzden aynı ölçüyü 2002'den bu yana yapılan bütün genel seçimlere uyguladım.</p>
+  <p>Sonuç net: önceki yedi seçimin öncesinde kurun yükseldiği gün oranı <strong>%31 ile %59</strong>
+  arasında kaldı. Yani kabaca yarı yarıya — tam da yönü belli olmayan normal bir piyasada
+  beklediğiniz gibi. 2023 ise bu aralığın çok dışında.</p>
+
+  <figure>
+    <div class="cerceve">
+      <p class="gbas">Sekiz seçim, tek bir aykırı</p>
+      <p class="galt">Seçimden önceki 30 işlem gününde kurun yükseldiği gün oranı.</p>
+      <svg id="noktalar" viewBox="0 0 700 250" role="img"
+           aria-label="Sekiz genel seçimin yükselen gün oranları; yedisi yüzde 31 ile 59 arasında kümelenirken 2023 yüzde 93 ile uzakta duruyor"></svg>
+      <p class="gkaynak">Kesikli çizgi %50 — yani yönü belli olmayan bir piyasa</p>
+    </div>
+  </figure>
+
+  <h2>Peki <span>neden</span> önemli?</h2>
+  <p>Döviz kuru Türkiye'de sadece ekranda akan bir rakam değil. İthal ettiğiniz her şeyin —
+  benzinin, ilacın, telefonun, hayvan yeminin — fiyatını o belirliyor. Kur hareket etmediğinde
+  enflasyon da bir süre hareket etmemiş gibi görünür.</p>
+  <p>Ama ertelenen ayarlama kaybolmuyor. Seçimden sonraki otuz işlem gününde günlük hareket
+  1,5 kuruştan <strong>22 kuruşa</strong> çıktı — on beş katı. Kur aynı sürede
+  <strong>%32</strong> arttı. Otuz gün boyunca görünmeyen hareket, sonraki otuz günde
+  bir kerede geldi.</p>
+  <p>Bir ayrıntı daha var ve önemli: bu sıçrama seçimin ertesi günü olmadı. İlk on gün kur
+  yine kıpırdamadı. Hareket, ikinci turdan ve yeni ekonomi yönetiminin göreve başlamasından
+  sonra geldi.<sup>2</sup> Yani hikâye "sandık kapandı, kur bırakıldı" değil;
+  "hükümet kuruldu, sonra ayarlandı".</p>
+
+  <h2>Peki "kur sabitlenmişti" mi diyorum?</h2>
+  <p>Hayır — ve burada dikkatli olmak gerekiyor, çünkü iki ayrı şey var: kurumların ne
+  söylediği ve verinin ne gösterdiği.</p>
+  <p>TCMB böyle bir şey ilan etmedi. Resmî metinlerinde kur hedefi olmadığını açıkça yazıyor.
+  Ama IMF, Türkiye'nin <em>fiili</em> kur rejimini 2024 raporunda "sürünür benzeri" diye
+  sınıflandırıyor.<sup>3</sup> IMF her ülke için iki etiket tutar: ülkenin ilan ettiği rejim
+  ve verinin gösterdiği rejim. Türkiye'de ikisi aynı değil. Hazine ve Maliye Bakanı da Eylül
+  2026'da serbest dalgalı kura geçiş şartlarının henüz oluşmadığını, bunun için "döviz
+  piyasasında iki yönlü hareket" görmek istediklerini söyledi.</p>
+
+  <div class="iddia">
+    <div class="evet">
+      <h3>Söylediğim</h3>
+      <p>Kur, 24 yıllık veride eşi görülmemiş biçimde tek yönlü ve düzgün hareket etti.
+      Seçimden sonra bu düzen bozuldu.</p>
+    </div>
+    <div class="hayir">
+      <h3>Söylemediğim</h3>
+      <p>Bunu kimin, neden yaptığı. Sermaye kısıtları, Kur Korumalı Mevduat ve ihracat bedeli
+      zorunluluğu gibi araçlar, kur sabitlenmeden de aynı sonucu doğurabilir.</p>
+    </div>
+  </div>
+
+  <div class="kapanis">
+    <p>Son bir uyarı, çünkü bu tür grafikler insanı hızlı sonuca çeker:
+    <strong>bu bir kural değil, tek bir vaka.</strong> Sekiz genel seçimin tamamını test
+    ettiğimde, seçimlerden sonra kurun sistematik olarak çalkalandığına dair bir bulgu
+    çıkmadı.<sup>4</sup> 2023, bu veride tek başına duruyor. Bir sonraki seçim, bunun bir
+    alışkanlık mı yoksa bir istisna mı olduğunu gösterecek.</p>
+  </div>
+
+  <div class="dipnot">
+    <h2>Dipnotlar ve kaynaklar</h2>
+    <ol>
+      <li><b>Yükselen gün oranları.</b> <span class="mono">2002: 15/29 · 2007: 9/29 · 2011: 14/29 ·
+      2014: 12/29 · 2015 Haz: 15/29 · 2015 Kas: 12/29 · 2018: 17/29 · 2023: 27/29</span>.
+      Her pencere, seçim gününden geriye 30 işlem günüdür.</li>
+      <li><b>Seçim sonrası kümülatif değişim</b> (2018 ve 2023 ortalaması):
+      <span class="mono">T+1 −0,5% · T+5 −0,9% · T+10 +0,1% · T+20 +11,3% · T+30 +19,9%</span>.
+      İlk beş günün otuz günlük harekete katkısı %−5. 2023 için T+10 ≈ 26 Mayıs (ikinci turdan
+      önce), T+20 ≈ 12 Haziran.</li>
+      <li><b>Teknik ölçüm.</b> Seçim öncesi 30 işlem gününde yıllıklandırılmış gerçekleşen
+      oynaklık <span class="mono">%0,81</span>; diğer yedi seçimde <span class="mono">6,5–26,6</span>
+      aralığında. Seçim sonrası <span class="mono">%27,32</span>. Günlük değişimin standart
+      sapması <span class="mono">0,99</span> kuruş, ortalaması <span class="mono">1,49</span> kuruş —
+      hareketin büyüklüğü, hareketler arasındaki farktan büyük. Serbest bir piyasada bunun tersi beklenir.</li>
+      <li><b>Sekiz seçimin tamamı.</b> Ortalama log oynaklık oranı ×1,86 (plasebo p=0,005), ancak
+      2023 çıkarıldığında ×1,23'e iniyor. Aykırı değere dayanıksız testler anlamsız: işaret testi
+      (6/8 seçimde artış) <span class="mono">p=0,289</span>; medyan tabanlı plasebo
+      <span class="mono">p=0,274</span>.</li>
+    </ol>
+    <p style="margin-top:14px"><b>Veri:</b> TCMB EVDS, <span class="mono">TP.DK.USD.A.YTL</span>,
+    günlük döviz alış kuru, 2002–2026. <b>Kaynaklar:</b> TCMB 2026 Para Politikası metni;
+    IMF, <i>Republic of Türkiye: 2024 Article IV Consultation — Informational Annex</i>;
+    Bloomberg HT, 10 Eylül 2026.</p>
+  </div>
+</div>
+
+<div class="ipucu" id="ipucu"></div>
+
+<script>
+const TARIH=["03-30","03-31","04-03","04-04","04-05","04-06","04-07","04-10","04-11","04-12","04-13","04-14","04-17","04-18","04-19","04-20","04-24","04-25","04-26","04-27","04-28","05-02","05-03","05-04","05-05","05-08","05-09","05-10","05-11","05-12","05-15","05-16","05-17","05-18","05-22","05-23","05-24","05-25","05-26","05-29","05-30","05-31","06-01","06-02","06-05","06-06","06-07","06-08","06-09","06-12","06-13","06-14","06-15","06-16","06-19","06-20","06-21","06-22","06-23","06-26","06-27"];
+const KUR=[19.107,19.146,19.1532,19.1788,19.2001,19.2266,19.2361,19.2332,19.238,19.2619,19.2885,19.307,19.3363,19.3542,19.3755,19.3806,19.3806,19.3853,19.3937,19.4029,19.4103,19.4268,19.4417,19.4511,19.4647,19.4747,19.4837,19.4909,19.5134,19.5389,19.5649,19.6386,19.68,19.7336,19.7607,19.8047,19.827,19.86,19.9027,19.9512,20.0453,20.3104,20.6632,20.7529,20.8447,21.1465,21.4565,23.021,23.3212,23.4314,23.6117,23.6387,23.5989,23.6389,23.6388,23.6371,23.577,23.5493,23.6239,25.2505,25.8231];
+const SECIM=30,TUR2=39,EKIP=48;
+const SECIMLER=[["2002",52],["2007",31],["2011",48],["2014",41],["2015 Haz",52],["2015 Kas",41],["2018",59],["2023",93]];
+const AY={"03":"Mart","04":"Nisan","05":"Mayıs","06":"Haziran"};
+const NS="http://www.w3.org/2000/svg", ip=document.getElementById("ipucu");
+function el(p,t,a,s){const n=document.createElementNS(NS,t);for(const k in a)n.setAttribute(k,a[k]);
+  if(s)n.setAttribute("style",s);p.appendChild(n);return n;}
+function yaz(p,x,y,t,s,anc){const n=el(p,"text",{x:x,y:y},s);if(anc)n.setAttribute("text-anchor",anc);
+  n.textContent=t;return n;}
+const T_=i=>{const[a,g]=TARIH[i].split("-");return parseInt(g,10)+" "+AY[a];};
+const SANS="font-family:var(--sans);",MONO="font-family:var(--mono);";
+function goster(e,i){const d=i>0?((KUR[i]-KUR[i-1])*100):null;
+  ip.innerHTML="<b>"+T_(i)+"</b>&nbsp;&nbsp;"+KUR[i].toFixed(4).replace(".",",")+
+   (d===null?"":"<br>"+(d>=0?"+":"−")+Math.abs(d).toFixed(2).replace(".",",")+" kuruş");
+  ip.style.opacity=1;ip.style.left=Math.min(e.clientX+16,innerWidth-152)+"px";
+  ip.style.top=Math.max(e.clientY-50,8)+"px";}
+function gizle(){ip.style.opacity=0;}
+function hover(s,n,xf,T,H,B,i0){for(let i=i0;i<i0+n;i++){const w=xf(i0+1)-xf(i0);
+  const r=el(s,"rect",{x:xf(i)-w/2,y:T,width:w,height:H-T-B,fill:"transparent"});
+  r.style.cursor="crosshair";r.addEventListener("mousemove",e=>goster(e,i));
+  r.addEventListener("mouseleave",gizle);}}
+
+/* ============ ANA ============ */
+(function(){
+  const s=document.getElementById("ana"),W=700,H=340,L=46,R=92,T=26,B=36;
+  const x=i=>L+i*(W-L-R)/60, lo=18.9,hi=26.2, y=v=>T+(hi-v)*(H-T-B)/(hi-lo);
+  const d1=el(s,"defs",{});
+  const g1=el(d1,"linearGradient",{id:"gm",x1:0,y1:0,x2:0,y2:1});
+  el(g1,"stop",{offset:"0%","stop-color":"var(--isaret)","stop-opacity":".26"});
+  el(g1,"stop",{offset:"100%","stop-color":"var(--isaret)","stop-opacity":"0"});
+  const g2=el(d1,"linearGradient",{id:"gp",x1:0,y1:0,x2:0,y2:1});
+  el(g2,"stop",{offset:"0%","stop-color":"var(--piyasa)","stop-opacity":".22"});
+  el(g2,"stop",{offset:"100%","stop-color":"var(--piyasa)","stop-opacity":"0"});
+
+  for(let v=19;v<=26;v++){
+    el(s,"line",{x1:L,x2:W-R,y1:y(v),y2:y(v)},"stroke:var(--ince);stroke-width:1");
+    yaz(s,L-9,y(v)+3.5,v,MONO+"font-size:10px;fill:var(--soluk)","end");
+  }
+  const bas=H-B;
+  function merdiven(a,b){let d="M "+x(a)+" "+y(KUR[a]);
+    for(let i=a+1;i<=b;i++)d+=" L "+x(i)+" "+y(KUR[i-1])+" L "+x(i)+" "+y(KUR[i]);return d;}
+  el(s,"path",{d:merdiven(0,SECIM)+" L "+x(SECIM)+" "+bas+" L "+x(0)+" "+bas+" Z",fill:"url(#gp)"});
+  el(s,"path",{d:merdiven(SECIM,60)+" L "+x(60)+" "+bas+" L "+x(SECIM)+" "+bas+" Z",fill:"url(#gm)"});
+  el(s,"path",{d:merdiven(0,SECIM),fill:"none"},"stroke:var(--piyasa);stroke-width:2.1;stroke-linejoin:miter");
+  el(s,"path",{d:merdiven(SECIM,60),fill:"none"},"stroke:var(--isaret);stroke-width:2.1;stroke-linejoin:miter");
+
+  [[SECIM,"Seçim",0],[TUR2,"2. tur",1],[EKIP,"Yeni ekonomi ekibi",1]].forEach(([i,ad,k])=>{
+    el(s,"line",{x1:x(i),x2:x(i),y1:T-10,y2:bas},
+      "stroke:var(--soluk);stroke-width:1;stroke-dasharray:"+(k?"2 3":"0")+";opacity:"+(k?.7:1));
+    yaz(s,x(i)+(i===EKIP?-5:5),T-2,ad,SANS+"font-size:10.5px;font-weight:600;fill:var(--soluk)",
+      i===EKIP?"end":"start");
+  });
+  // tek düşen gün
+  el(s,"circle",{cx:x(7),cy:y(KUR[7]),r:3.4},"fill:var(--kart);stroke:var(--murekkep);stroke-width:1.5");
+  el(s,"line",{x1:x(7),x2:x(7)-4,y1:y(KUR[7])+5,y2:y(KUR[7])+24},"stroke:var(--murekkep);stroke-width:1");
+  yaz(s,x(7)-6,y(KUR[7])+33,"tek düşen gün",SANS+"font-size:10px;fill:var(--murekkep)","start");
+  yaz(s,x(7)-6,y(KUR[7])+45,"−0,29 kuruş",MONO+"font-size:10px;fill:var(--soluk)","start");
+  // sağ parantez: +%32
+  const bx=W-R+16;
+  el(s,"path",{d:"M "+bx+" "+y(KUR[SECIM])+" l 7 0 L "+(bx+7)+" "+y(KUR[60])+" l -7 0",fill:"none"},
+    "stroke:var(--isaret);stroke-width:1.4");
+  yaz(s,bx+13,(y(KUR[SECIM])+y(KUR[60]))/2-3,"+%32",MONO+"font-size:15px;font-weight:600;fill:var(--isaret)");
+  yaz(s,bx+13,(y(KUR[SECIM])+y(KUR[60]))/2+11,"30 işlem günü",SANS+"font-size:10px;fill:var(--soluk)");
+  // sol parantez: +%2,3
+  el(s,"path",{d:"M "+x(0)+" "+(bas+9)+" l 0 5 L "+x(SECIM)+" "+(bas+14)+" l 0 -5",fill:"none"},
+    "stroke:var(--piyasa);stroke-width:1.2");
+  yaz(s,(x(0)+x(SECIM))/2,bas+28,"30 gün · +%2,3",SANS+"font-size:11px;font-weight:600;fill:var(--piyasa)","middle");
+  el(s,"line",{x1:L,x2:W-R,y1:bas,y2:bas},"stroke:var(--cizgi);stroke-width:1.2");
+  [0,30,60].forEach(i=>yaz(s,x(i),bas+28,T_(i),MONO+"font-size:10px;fill:var(--soluk)",
+    i===0?"start":(i===60?"end":"middle")));
+  yaz(s,L-9,T-6,"TL",SANS+"font-size:9.5px;font-weight:600;fill:var(--soluk)","end");
+  hover(s,61,x,T,H,B,0);
+})();
+
+/* ============ BÜYÜTEÇ — dolu basamaklar ============ */
+(function(){
+  const s=document.getElementById("buyutec"),W=700,H=270,L=52,R=104,T=22,B=40;
+  const a=15,b=30,n=b-a;
+  const w=(W-L-R)/n, x=i=>L+(i-a)*w;
+  const lo=19.355,hi=19.556, y=v=>T+(hi-v)*(H-T-B)/(hi-lo), bas=H-B;
+  for(let v=19.36;v<=19.5561;v+=0.04){
+    el(s,"line",{x1:L,x2:W-R,y1:y(v),y2:y(v)},"stroke:var(--ince);stroke-width:1");
+    yaz(s,L-9,y(v)+3.5,v.toFixed(2).replace(".",","),MONO+"font-size:10px;fill:var(--soluk)","end");
+  }
+  for(let i=a;i<b;i++){
+    el(s,"rect",{x:x(i),y:y(KUR[i]),width:w-1.4,height:bas-y(KUR[i])},
+      "fill:var(--piyasa);opacity:.17");
+    el(s,"line",{x1:x(i),x2:x(i)+w-1.4,y1:y(KUR[i]),y2:y(KUR[i])},
+      "stroke:var(--piyasa);stroke-width:2.6;stroke-linecap:butt");
+    if(i>a) el(s,"line",{x1:x(i),x2:x(i),y1:y(KUR[i-1]),y2:y(KUR[i])},
+      "stroke:var(--piyasa);stroke-width:1.2;opacity:.55");
+  }
+  // eşit basamak vurgusu
+  [21,24,27].forEach(i=>{
+    yaz(s,x(i)+w/2,y(KUR[i])-7,"+"+((KUR[i]-KUR[i-1])*100).toFixed(1).replace(".",",")+" kr",
+      MONO+"font-size:9.5px;font-weight:500;fill:var(--piyasa)","middle");
+  });
+  el(s,"line",{x1:L,x2:W-R,y1:bas,y2:bas},"stroke:var(--cizgi);stroke-width:1.2");
+  [a,a+7,b-1].forEach(i=>yaz(s,x(i)+w/2,bas+20,T_(i),MONO+"font-size:10px;fill:var(--soluk)","middle"));
+  yaz(s,L-9,T-4,"TL",SANS+"font-size:9.5px;font-weight:600;fill:var(--soluk)","end");
+  // sağ açıklama
+  const rx=W-R+18;
+  yaz(s,rx,T+22,"Her basamak",SANS+"font-size:11.5px;font-weight:600;fill:var(--murekkep)");
+  yaz(s,rx,T+38,"bir işlem günü.",SANS+"font-size:11.5px;fill:var(--soluk)");
+  yaz(s,rx,T+62,"Yükseklikleri",SANS+"font-size:11.5px;fill:var(--soluk)");
+  yaz(s,rx,T+78,"neredeyse eşit.",SANS+"font-size:11.5px;fill:var(--soluk)");
+  hover(s,n,i=>x(i)+w/2,T,H,B,a);
+})();
+
+/* ============ SEKİZ SEÇİM ============ */
+(function(){
+  const s=document.getElementById("noktalar"),W=700,H=250,L=96,R=54,T=30,B=34;
+  const x=p=>L+p*(W-L-R)/100, y=i=>T+i*(H-T-B)/7;
+  // normal aralık bandı
+  el(s,"rect",{x:x(31),y:T-8,width:x(59)-x(31),height:H-B-T+10},"fill:var(--piyasa-sis)");
+  yaz(s,(x(31)+x(59))/2,T-14,"önceki yedi seçimin aralığı",
+    SANS+"font-size:10.5px;font-weight:600;fill:var(--piyasa)","middle");
+  [0,25,50,75,100].forEach(p=>{
+    el(s,"line",{x1:x(p),x2:x(p),y1:T-8,y2:H-B+2},
+      "stroke:var(--ince);stroke-width:1;stroke-dasharray:"+(p===50?"3 3":"0"));
+    yaz(s,x(p),H-B+18,"%"+p,MONO+"font-size:10px;fill:var(--soluk)","middle");
+  });
+  SECIMLER.forEach(([ad,p],i)=>{
+    const son=i===7,renk=son?"var(--isaret)":"var(--piyasa)";
+    el(s,"line",{x1:L,x2:x(p),y1:y(i),y2:y(i)},"stroke:var(--cizgi);stroke-width:1");
+    el(s,"circle",{cx:x(p),cy:y(i),r:son?7:5.2},
+      "fill:"+renk+";stroke:var(--kart);stroke-width:1.8");
+    yaz(s,L-14,y(i)+4,ad,SANS+"font-size:12.5px;font-weight:"+(son?700:400)+
+      ";fill:"+(son?"var(--isaret)":"var(--murekkep)"),"end");
+    yaz(s,x(p)+13,y(i)+4,"%"+p,MONO+"font-size:12px;font-weight:"+(son?600:400)+
+      ";fill:"+(son?"var(--isaret)":"var(--soluk)"));
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Aralık bütçe şoku, Ağustos cari fazlası ve Mart döngüsü. Cari dengede 24 yılın 24&#x27;ünde şaşmayan bir takvim etkisi var.">
+<meta name="author" content="Kağan Onur">
+<meta name="theme-color" content="#F4F3EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141519" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://kaganonur.vercel.app/turkiye-ekonomisi/bulgu-02">
+<link rel="icon" href="/favicon.ico">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kağan Onur">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Ekonominin Takvimi">
+<meta property="og:description" content="Aralık bütçe şoku, Ağustos cari fazlası ve Mart döngüsü. Cari dengede 24 yılın 24&#x27;ünde şaşmayan bir takvim etkisi var.">
+<meta property="og:url" content="https://kaganonur.vercel.app/turkiye-ekonomisi/bulgu-02">
+<meta property="og:image" content="https://kaganonur.vercel.app/turkiye-ekonomisi/og/bulgu-02.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<title>Ekonominin Takvimi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --kagit:#F4F3EF; --kart:#FBFAF8; --murekkep:#15171B; --soluk:#6E7079;
+  --cizgi:#DDDBD4; --ince:#EAE8E2;
+  --piyasa:#3F6E8C; --isaret:#B5391C; --isaret-sis:#B5391C0D;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+  --kagit:#141519; --kart:#1A1C21; --murekkep:#F1F0EA; --soluk:#9A9CA4;
+  --cizgi:#30333A; --ince:#24272C;
+  --piyasa:#79ACCA; --isaret:#E4714A; --isaret-sis:#E4714A14;
+}}
+:root[data-theme="dark"]{
+  --kagit:#141519; --kart:#1A1C21; --murekkep:#F1F0EA; --soluk:#9A9CA4;
+  --cizgi:#30333A; --ince:#24272C;
+  --piyasa:#79ACCA; --isaret:#E4714A; --isaret-sis:#E4714A14;
+}
+*{box-sizing:border-box}
+body{background:var(--kagit);color:var(--murekkep);font-family:var(--serif);-webkit-font-smoothing:antialiased}
+.sayfa{max-width:760px;margin:0 auto;padding-inline:20px;padding-block:clamp(34px,6vw,72px)}
+.kunye{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.15em;
+       text-transform:uppercase;color:var(--soluk);display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+.kunye i{width:22px;height:2px;background:var(--isaret);display:inline-block;font-style:normal}
+h1{font-weight:500;font-size:clamp(36px,8vw,64px);line-height:1.02;letter-spacing:-.025em;
+   margin:.34em 0 .26em;text-wrap:balance}
+.spot{font-size:clamp(18px,2.4vw,21px);line-height:1.52;font-weight:300;max-width:31em;margin:0 0 6px;color:var(--soluk)}
+hr{height:1px;background:var(--cizgi);border:0;margin:30px 0}
+p{font-size:18px;line-height:1.72;max-width:33em;margin:0 0 1.1em;font-weight:350}
+p.giris{font-size:19.5px;line-height:1.66}
+strong{font-weight:600}
+h2{font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.02em;margin:40px 0 12px;max-width:33em}
+h2 span{color:var(--isaret)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kunye .damga{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:0;
+  text-transform:none;color:var(--soluk);padding:2px 7px;border:1px solid var(--cizgi);
+  border-radius:12px}
+
+.vurgu{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:20px;
+       margin:28px 0 32px;padding:20px 0;border-top:2px solid var(--murekkep);border-bottom:1px solid var(--cizgi)}
+.vurgu .rk{font-family:var(--mono);font-size:clamp(25px,4.4vw,32px);font-weight:600;
+           letter-spacing:-.035em;line-height:1;font-variant-numeric:tabular-nums}
+.vurgu .rk.k{color:var(--isaret)}
+.vurgu .bi{font-family:var(--sans);font-size:.46em;font-weight:500;letter-spacing:0}
+.vurgu .ak{font-family:var(--sans);font-size:12px;line-height:1.45;color:var(--soluk);margin-top:9px}
+figure{margin:30px 0 32px}
+.cerceve{background:var(--kart);border:1px solid var(--cizgi);border-radius:4px;padding:18px 18px 12px}
+.cerceve+.cerceve{margin-top:12px}
+.gbas{font-family:var(--sans);font-size:14px;font-weight:600;margin:0 0 3px;letter-spacing:-.005em}
+.galt{font-family:var(--sans);font-size:12.5px;color:var(--soluk);margin:0 0 14px;line-height:1.45;max-width:46em}
+.gkaynak{font-family:var(--sans);font-size:10.5px;color:var(--soluk);margin-top:9px;
+         padding-top:8px;border-top:1px solid var(--ince)}
+svg{display:block;width:100%;height:auto;overflow:visible}
+figcaption{font-family:var(--sans);font-size:12.5px;line-height:1.55;color:var(--soluk);margin-top:11px;max-width:40em}
+.ikili{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:640px){.ikili{grid-template-columns:1fr 1fr}}
+.ipucu{position:fixed;pointer-events:none;opacity:0;transition:opacity .08s;
+       background:var(--murekkep);color:var(--kagit);font-family:var(--mono);font-size:11.5px;
+       line-height:1.5;padding:7px 10px;border-radius:3px;z-index:9;white-space:nowrap;
+       box-shadow:0 4px 18px rgba(0,0,0,.22)}
+.iddia{display:grid;grid-template-columns:1fr;margin:34px 0;border:1px solid var(--cizgi);border-radius:4px;overflow:hidden}
+@media(min-width:620px){.iddia{grid-template-columns:1fr 1fr}}
+.iddia>div{padding:20px 20px 22px;background:var(--kart)}
+.iddia>div+div{border-top:1px solid var(--cizgi)}
+@media(min-width:620px){.iddia>div+div{border-top:0;border-left:1px solid var(--cizgi)}}
+.iddia h3{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin:0 0 10px}
+.evet h3{color:var(--piyasa)}.hayir h3{color:var(--isaret)}
+.iddia p{font-size:16px;line-height:1.6;margin:0;max-width:none}
+.kapanis{border-left:3px solid var(--isaret);padding:2px 0 2px 18px;margin:32px 0}
+.kapanis p{margin:0;font-size:17px;line-height:1.65}
+.dipnot{margin-top:46px;padding-top:20px;border-top:1px solid var(--cizgi)}
+.dipnot h2{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.14em;
+           text-transform:uppercase;color:var(--soluk);margin:0 0 14px}
+.dipnot p,.dipnot li{font-family:var(--sans);font-size:12.5px;line-height:1.62;color:var(--soluk);max-width:44em}
+.dipnot ol{padding-left:18px;margin:0}.dipnot li{margin-bottom:10px}
+.dipnot b{color:var(--murekkep)}
+sup{font-family:var(--sans);font-size:10px;font-weight:600;color:var(--isaret);vertical-align:super;line-height:0;margin-left:1px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* ---- üst şerit: portfolyoya dönüş ve bölümler arası geçiş ---- */
+.ustserit{border-bottom:1px solid var(--cizgi);background:var(--kart)}
+.us-ic{max-width:940px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;
+  gap:10px 20px;flex-wrap:wrap}
+.us-logo{font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:-.01em;
+  color:var(--murekkep);text-decoration:none;margin-right:auto;display:flex;align-items:center;gap:8px}
+.us-logo b{width:16px;height:2px;background:var(--isaret);display:inline-block}
+.us-nav{display:flex;gap:4px;flex-wrap:wrap}
+.us-nav a{font-family:var(--sans);font-size:12px;font-weight:500;color:var(--soluk);
+  text-decoration:none;padding:4px 9px;border-radius:14px;transition:color .12s,background .12s}
+.us-nav a:hover{color:var(--murekkep);background:var(--ince)}
+.us-nav a[aria-current="page"]{color:var(--murekkep);font-weight:600;background:var(--ince)}
+.us-nav a.disari{color:var(--piyasa);font-weight:600}
+</style>
+</head>
+<body>
+<div class="ustserit"><div class="us-ic"><a class="us-logo" href="/"><b></b>Kağan Onur</a><nav class="us-nav"><a href="/turkiye-ekonomisi">Genel bakış</a><a href="/turkiye-ekonomisi/bulgu-01">01 Merdiven</a><a href="/turkiye-ekonomisi/bulgu-02" aria-current="page">02 Takvim</a><a href="/turkiye-ekonomisi/bulgu-03">03 Faiz</a><a href="/turkiye-ekonomisi/bulgu-04">04 Karar günü</a><a href="/turkiye-ekonomisi/gezgin">Veri gezgini</a><a class="disari" href="/">Portfolyo →</a></nav></div></div>
+<div class="sayfa">
+
+  <div class="kunye"><i></i>Türkiye Ekonomisi · Bulgu 02 · Takvim döngüleri<span class="damga">Veri son güncelleme: 20 Eyl 2026</span></div>
+  <h1>Ekonominin takvimi</h1>
+  <p class="spot">Türkiye ekonomisinde bazı şeyler her yıl, aynı ayda, aynı yöne tekrarlıyor.
+  Bunlardan biri yirmi dört yılda yirmi dört kez şaşmadı.</p>
+
+  <hr>
+
+  <p class="giris">Yaz gelince otellerin dolduğunu, kışın doğal gaz faturasının kabardığını
+  herkes bilir. Ama bunlar "hayatın akışı" diye geçiştirilen şeyler. Peki ekonominin
+  kendisi de bir takvime göre mi çalışıyor? Yani rakamlar, her yıl aynı ayda aynı şeyi
+  yapıyor mu?</p>
+
+  <p>2002'den bugüne aylık verinin tamamına baktım. Cevap: evet — ve üç tanesi o kadar
+  düzenli ki, takvime bakarak tahmin edebilirsiniz.</p>
+
+  <h2>1. Aralık: devletin en pahalı ayı</h2>
+  <p>Bütçe her ay açık vermez; bazı aylar fazla bile verir. Ama <strong>Aralık</strong>
+  başka bir şey. Enflasyondan arındırıp karşılaştırdığımda, Aralık ayının ortalama açığı
+  yılın diğer aylarının ortalamasının <strong>sekiz katı</strong> çıkıyor.</p>
+  <p>Daha çarpıcısı: yirmi tam yılın <strong>on beşinde</strong> yılın en büyük bütçe açığı
+  Aralık ayında verilmiş. Kalan beş yılın hepsinde araya bir kriz girmiş — 2008'de küresel
+  finansal kriz, 2020'de salgın.<sup>1</sup></p>
+
+  <figure>
+    <div class="cerceve">
+      <p class="gbas">Bütçe dengesi, aya göre</p>
+      <p class="galt">Trend ve enflasyon arındırıldıktan sonra her ayın yıl ortalamasından
+      sapması. Mavi: fazla tarafı. Kiremit: açık tarafı.</p>
+      <svg id="butce" viewBox="0 0 700 260" role="img"
+           aria-label="Aylara göre bütçe dengesi: Aralık ayı diğer bütün aylardan çok daha derin bir açık gösteriyor"></svg>
+      <p class="gkaynak">Kaynak: Hazine ve Maliye Bakanlığı, merkezi yönetim bütçesi · TÜFE ile deflate edilmiş, 2003 fiyatlarıyla</p>
+    </div>
+  </figure>
+
+  <h2>2. Ağustos: paranın geldiği ay</h2>
+  <p>Cari işlemler dengesi, ülkeye giren dövizle çıkan dövizin farkı. Türkiye bu dengede
+  neredeyse her zaman açık verir — ama yılın belli aylarında vermez.</p>
+  <p>Temmuz'dan Ekim'e kadar tablo tersine döner. Ağustos ayının yıl ortalamasından sapması
+  <strong>+2,7 milyar dolar</strong>; Mart'ınki <strong>−1,4 milyar dolar</strong>. Aradaki
+  fark, yılın içinde dört milyar doları aşan bir salınım.</p>
+  <p>Ve şu rakam bence bu projenin en net bulgusu:
+  <strong>elimizdeki yirmi dört yılın yirmi dördünde de</strong> Ağustos ayı, aynı yılın
+  Mart ayından daha iyi bir cari denge verdi. Yirmi dört yıl, yirmi dört isabet, tek istisna yok.</p>
+
+  <div class="vurgu">
+    <div><div class="rk k">24<span class="bi">&thinsp;/&thinsp;24</span></div>
+         <div class="ak">Ağustos'un Mart'tan iyi olduğu yıl sayısı<br>(cari işlemler dengesi)</div></div>
+    <div><div class="rk">15<span class="bi">&thinsp;/&thinsp;20</span></div>
+         <div class="ak">Yılın en büyük bütçe açığının<br>Aralık'ta verildiği yıl sayısı</div></div>
+    <div><div class="rk">~4<span class="bi"> milyar $</span></div>
+         <div class="ak">Cari dengenin yıl içindeki<br>Ağustos–Mart salınımı</div></div>
+  </div>
+
+  <figure>
+    <div class="cerceve">
+      <p class="gbas">Cari işlemler dengesi, aya göre</p>
+      <p class="galt">Temmuz–Ekim arası döviz girişi ağır basıyor, kışın tersi oluyor.</p>
+      <svg id="cari" viewBox="0 0 700 260" role="img"
+           aria-label="Aylara göre cari işlemler dengesi: temmuz-ekim arası fazla, kasım-mayıs arası açık"></svg>
+      <p class="gkaynak">Kaynak: TCMB ödemeler dengesi istatistikleri · milyon ABD doları · 2002–2026</p>
+    </div>
+  </figure>
+
+  <p>Peki bu ritim nereden geliyor? İlk akla gelen turizm — ama "akla gelmesi" kanıt değil.
+  Turizm gelir ve giderlerini ayrıca indirip aynı hesabı onlara da uyguladım.</p>
+  <p>İki eğri neredeyse üst üste biniyor. Ağustos ayında cari dengedeki mevsimsel fazlanın
+  <strong>%88'i</strong> net turizm geliriyle açıklanıyor; Temmuz–Ekim toplamında oran
+  <strong>%82</strong>. İki ay profilinin korelasyonu <strong>0,92</strong>. Üstelik elimizdeki
+  on dört yılın <strong>on dördünde de</strong> Ağustos net turizm geliri pozitif.<sup>4</sup></p>
+
+  <figure>
+    <div class="cerceve">
+      <p class="gbas">Aynı ritim, turizm verisiyle</p>
+      <p class="galt">Çubuklar cari işlemler dengesi, koyu çizgi net turizm geliri
+      (gelir eksi gider). İkisi de aynı birimde ve aynı eksende.</p>
+      <svg id="turizm" viewBox="0 0 700 270" role="img"
+           aria-label="Cari işlemler dengesinin aylık profili ile net turizm gelirinin aylık profili neredeyse aynı biçimi izliyor"></svg>
+      <p class="gkaynak">Turizm verisi 2012'de başladığı için bu grafik 2012–2026 dönemini kapsar · milyon ABD doları</p>
+    </div>
+  </figure>
+
+  <p>Turizmi cari dengeden çıkardığımda mevsimsel salınım <strong>yarıdan fazla</strong>
+  küçülüyor (5,9 milyar dolardan 2,6 milyar dolara). Yani turizm bu ritmin ana kaynağı —
+  ama tamamı değil. Geriye kalan kısım için enerji ithalatı ve ihracat mevsimselliği güçlü
+  adaylar, ancak onları henüz ayrıştırmadım.</p>
+
+  <h2>3. Mart: kurun ve kredinin hızlandığı ay</h2>
+  <p>Üçüncüsü daha ince ama aynı derecede düzenli. Mart ayında dolar kuru, yılın ortalama
+  ayından <strong>1,6 puan</strong> daha hızlı yükseliyor. Kredi hacmi de
+  <strong>1,1 puan</strong> daha hızlı büyüyor.</p>
+  <p>Yirmi üç yılın on altısında Mart, o yılın medyan ayından daha yüksek bir kur artışı
+  gösterdi. Kredide oran on sekizde on beş.<sup>2</sup></p>
+
+  <figure>
+    <div class="ikili">
+      <div class="cerceve">
+        <p class="gbas">Dolar kuru, aylık değişim</p>
+        <p class="galt">Yıl ortalamasından sapma, puan.</p>
+        <svg id="usd" viewBox="0 0 340 230" role="img"
+             aria-label="Aylara göre dolar kurunun aylık değişimi; mart ayı en yüksek"></svg>
+      </div>
+      <div class="cerceve">
+        <p class="gbas">Kredi hacmi, aylık büyüme</p>
+        <p class="galt">Yıl ortalamasından sapma, puan.</p>
+        <svg id="kredi" viewBox="0 0 340 230" role="img"
+             aria-label="Aylara göre kredi hacminin aylık büyümesi; mart ayı en yüksek"></svg>
+      </div>
+    </div>
+  </figure>
+
+  <h2>Peki bu <span>seçimlerden</span> mi geliyor?</h2>
+  <p>Akla gelen ilk itiraz bu, çünkü Türkiye'de yerel seçimlerin hepsi Mart'ta yapılır.
+  Belki de gördüğüm şey bir takvim döngüsü değil, seçim öncesi hareketliliktir.</p>
+  <p>Ayırmak için Mart aylarını ikiye böldüm: yerel seçim yapılan yılların Mart'ları ve
+  diğerleri. Eğer sebep seçimse, seçim yıllarının Mart'ları belirgin biçimde daha hareketli
+  olmalı.</p>
+  <p>Olmadı. Kurda seçim yılı Martları ortalama <strong>+0,69</strong>, diğer Martlar
+  <strong>+1,77</strong> — yani seçim yıllarında hafifçe <em>daha sakin</em>. Kredide ikisi
+  neredeyse aynı (+1,23'e karşı +1,06). İki farkın da istatistiksel anlamı yok.<sup>3</sup></p>
+  <p>Yani Mart döngüsü seçimlerden gelmiyor. Her yıl orada.</p>
+
+  <h2>Yöntemin doğru olduğunu nereden biliyorum?</h2>
+  <p>Bu soruyu kendime sormak zorundaydım, çünkü mevsimsellik aramaya çıkan bir yöntem
+  mevsimsellik bulmaya meyillidir. İlk kurduğum yöntem de tam olarak bu tuzağa düştü.</p>
+  <p>Kontrol şu: TÜİK'in sanayi üretim endeksinin <em>zaten mevsimsellikten arındırılmış</em>
+  bir versiyonu var. Yöntemim doğru çalışıyorsa bu seride ay etkisi <strong>bulmamalı</strong>.
+  Bulursa yöntem bozuktur.</p>
+  <p>İlk denememde bu seride p=0,000 ile "çok güçlü ay etkisi" buldum — yani yöntem bozuktu.
+  Sebebi şuydu: yıl ortalamasını çıkarmak, yıl <em>içindeki</em> trendi temizlemiyordu.
+  Yöntemi klasik mevsimsel ayrıştırmayla değiştirdim. Şimdi aynı seride sonuç p=0,81:
+  hiçbir ay etkisi yok. Kontrol geçti.</p>
+
+  <figure>
+    <div class="cerceve">
+      <p class="gbas">Negatif kontrol: burada bir şey bulmamalıyım</p>
+      <p class="galt">Mevsimsellikten arındırılmış sanayi üretim endeksi. Çubuklar sıfır
+      çevresinde rastgele dağılıyor — yöntem, olmayan bir deseni uydurmuyor.</p>
+      <svg id="kontrol" viewBox="0 0 700 200" role="img"
+           aria-label="Mevsimsellikten arındırılmış sanayi üretiminde aylar arası anlamlı fark yok"></svg>
+      <p class="gkaynak">F testi p = 0,8136 · Diğer üç seride p &lt; 0,05</p>
+    </div>
+  </figure>
+
+  <h2>Peki <span>neden</span> önemli?</h2>
+  <p>İki sebeple. Birincisi pratik: bir rakamın yükselmesi her zaman haber değildir.
+  Aralık'ta bütçe açığı büyüdüğünde ya da Mart'ta kur hızlandığında, bu "ekonomi kötüye
+  gidiyor" demek olmayabilir — takvim öyle yapıyordur. Bir hareketin anlamlı olup olmadığını
+  anlamak için önce takvimin payını düşmek gerekir.</p>
+  <p>İkincisi yöntemsel: bu proje seçim etkisi arıyor. Yerel seçimler hep Mart'ta yapıldığı
+  için, takvim payını düşmeden yapılan her seçim analizi Mart döngüsünü seçim etkisi sanır.
+  Nitekim ilk denememde tam olarak bu oldu: mevsimselliği hesaba katmadan yaptığım testte
+  "seçimden sonra bütçe düzeliyor" gibi görünen güçlü bir sonuç çıktı. Sebebi Aralık'tı.</p>
+
+  <div class="iddia">
+    <div class="evet">
+      <h3>Söylediğim</h3>
+      <p>Bütçe, cari denge ve kredi/kur hareketlerinde yılın belirli aylarına bağlı,
+      trendden bağımsız, tekrarlayan desenler var. En güçlüsü cari dengede: 24 yılda 24.</p>
+    </div>
+    <div class="hayir">
+      <h3>Söylemediğim</h3>
+      <p>Aralık ve Mart döngülerinin <em>nedenini</em>. Cari dengede turizmin payını
+      gösterdim; kalan %44'ü ve diğer iki döngünün kaynağını göstermedim.</p>
+    </div>
+  </div>
+
+  <div class="kapanis">
+    <p>Takvim döngüleri, bu projenin şimdiye kadar bulduğu en sağlam düzenliliklerdir —
+    seçim etkilerinden çok daha güçlüdürler. Ama tam da bu yüzden dikkatli olmak gerekir:
+    bir desen ne kadar düzenliyse, onu bir <em>sebebe</em> bağlama isteği o kadar artar.
+    Aralık'ta ne olduğunu biliyorum; <strong>neden</strong> olduğunu göstermek ayrı bir iş.</p>
+  </div>
+
+  <div class="dipnot">
+    <h2>Dipnotlar ve yöntem</h2>
+    <ol>
+      <li><b>Aralık istisnaları.</b> Yılın en büyük açığının Aralık'ta olmadığı beş yıl ve
+      o yıl en büyük açığın düştüğü ay: <span class="mono">2007 → Ocak · 2008 → Eylül ·
+      2009 → Mart · 2018 → Haziran · 2020 → Mart</span>. Üçü küresel kriz veya salgın yılı.</li>
+      <li><b>Mart oranları.</b> Kur: 23 tam yılın 16'sında Mart, o yılın medyan ayının
+      üstünde. Kredi: 18 yılın 15'inde. Kredi serisi 2007-10'da başladığı için yıl sayısı daha az.</li>
+      <li><b>Seçim ayrımı.</b> Kurda seçim yılı Martları <span class="mono">+0,69</span> (n=4),
+      diğer Martlar <span class="mono">+1,77</span> (n=20), permütasyon testi
+      <span class="mono">p=0,678</span>. Kredide <span class="mono">+1,23</span> (n=4) ve
+      <span class="mono">+1,06</span> (n=13), <span class="mono">p=0,831</span>. 5000 tekrar.</li>
+      <li><b>Yöntem.</b> Her seri önce 2×12 merkezli hareketli ortalama ile trendden
+      arındırıldı, ardından ay kuklalarıyla regresyona sokuldu; ay katsayılarının topluca
+      sıfır olduğu hipotez F testiyle sınandı. Standart hatalar HAC (Newey–West, 12 gecikme).
+      F testi p değerleri: bütçe <span class="mono">0,0000</span> · cari denge
+      <span class="mono">0,0000</span> · kredi <span class="mono">0,0000</span> · kur
+      <span class="mono">0,0352</span> · sanayi üretimi (kontrol) <span class="mono">0,8136</span>.</li>
+      <li><b>Turizm karşılaştırması.</b> Turizm gelir ve gider serileri 2012-01'de başlıyor,
+      bu yüzden karşılaştırma 2012–2026 ortak döneminde yapıldı. Ay profillerinin korelasyonu
+      <span class="mono">r=0,924</span>. Ağustos: cari <span class="mono">+3.737</span>,
+      net turizm <span class="mono">+3.299</span> milyon $ (%88). Temmuz–Ekim toplamı:
+      <span class="mono">+10.174</span>'e karşı <span class="mono">+8.389</span> (%82).
+      Turizm çıkarıldığında mevsimsel genlik <span class="mono">5.930</span>'dan
+      <span class="mono">2.636</span> milyon dolara iniyor; kalan mevsimsellik hâlâ anlamlı
+      (<span class="mono">p&lt;0,0001</span>). EVDS turizm serileri bin dolar cinsindendir,
+      karşılaştırma için milyon dolara çevrildi.</li>
+    </ol>
+    <p style="margin-top:14px"><b>Veri:</b> TCMB EVDS ve Hazine ve Maliye Bakanlığı,
+    aylık seriler, 2002–2026. Bütçe serileri TÜFE ile deflate edilmiştir; nominal TL
+    serileriyle 24 yıllık karşılaştırma yapılamaz.</p>
+  </div>
+</div>
+
+<div class="ipucu" id="ipucu"></div>
+
+<script>
+const AYLAR=["Oca","Şub","Mar","Nis","May","Haz","Tem","Ağu","Eyl","Eki","Kas","Ara"];
+const AYTAM=["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık"];
+const D={
+ butce:[1.584,-0.996,-1.636,0.363,5.189,-1.353,0.242,3.566,-1.968,-0.052,4.308,-9.247],
+ cari:[-1066,-768,-1448,-1385,-1024,-96,815,2738,2220,2012,-104,-1892],
+ usd:[-0.11,-1.08,1.63,-1.36,1.08,0.48,-1.13,1.16,-0.41,-0.19,0.64,-0.72],
+ kredi:[-0.86,-0.09,1.10,0.09,0.58,0.68,-0.66,0.10,-0.12,-1.08,0.12,0.13],
+ kontrol:[0.30,0.27,0.33,-1.11,-0.30,0.09,-0.01,0.26,0.08,-0.20,-0.09,0.37],
+ cari12:[-1654,-1220,-1777,-1868,-1366,130,960,3737,2922,2555,-225,-2193],
+ turizm:[-1383,-1741,-1447,-1143,-311,257,1930,3299,2238,922,-1032,-1590]
+};
+const NS="http://www.w3.org/2000/svg", ip=document.getElementById("ipucu");
+const SANS="font-family:var(--sans);", MONO="font-family:var(--mono);";
+function el(p,t,a,s){const n=document.createElementNS(NS,t);for(const k in a)n.setAttribute(k,a[k]);
+  if(s)n.setAttribute("style",s);p.appendChild(n);return n;}
+function yaz(p,x,y,t,s,anc){const n=el(p,"text",{x:x,y:y},s);if(anc)n.setAttribute("text-anchor",anc);
+  n.textContent=t;return n;}
+function tr(v,b){return v.toLocaleString("tr-TR",{minimumFractionDigits:b,maximumFractionDigits:b});}
+
+/* genel çubuk grafik */
+function cubuk(id,veri,opt){
+  const s=document.getElementById(id);
+  const vb=s.getAttribute("viewBox").split(" ").map(Number), W=vb[2],H=vb[3];
+  const L=opt.L, R=12, T=opt.T||16, B=30;
+  const mx=Math.max(...veri.map(Math.abs))*1.18;
+  const y=v=>T+(mx-v)*(H-T-B)/(2*mx), sifir=y(0);
+  const w=(W-L-R)/12;
+  // ızgara
+  (opt.tik||[]).forEach(v=>{
+    el(s,"line",{x1:L,x2:W-R,y1:y(v),y2:y(v)},"stroke:var(--ince);stroke-width:1");
+    yaz(s,L-8,y(v)+3.5,opt.etiket(v),MONO+"font-size:9.5px;fill:var(--soluk)","end");
+  });
+  // arka plan vurgusu
+  if(opt.band) opt.band.forEach(([a,b])=>
+    el(s,"rect",{x:L+a*w,y:T-6,width:(b-a+1)*w,height:H-T-B+8},"fill:var(--isaret-sis)"));
+  veri.forEach((v,i)=>{
+    const vur = opt.vurgu!==undefined && i===opt.vurgu;
+    const renk = opt.tekRenk ? (vur?"var(--isaret)":"var(--piyasa)")
+                             : (v>=0?"var(--piyasa)":"var(--isaret)");
+    const yy=Math.min(y(v),sifir), hh=Math.abs(y(v)-sifir);
+    el(s,"rect",{x:L+i*w+w*0.16,y:yy,width:w*0.68,height:Math.max(hh,1),rx:1.5},
+      "fill:"+renk+";opacity:"+(opt.tekRenk&&!vur?".62":"1"));
+    yaz(s,L+i*w+w/2, v>=0?yy-6:yy+hh+13, opt.rk(v),
+      MONO+"font-size:9.5px;font-weight:"+(vur||opt.kalin===i?"600":"400")+
+      ";fill:"+(vur?"var(--isaret)":"var(--soluk)"),"middle");
+    yaz(s,L+i*w+w/2,H-B+18,AYLAR[i],SANS+"font-size:10.5px;font-weight:"+(vur?"700":"400")+
+      ";fill:"+(vur?"var(--isaret)":"var(--soluk)"),"middle");
+    const r=el(s,"rect",{x:L+i*w,y:T-6,width:w,height:H-T-B+8,fill:"transparent"});
+    r.style.cursor="crosshair";
+    r.addEventListener("mousemove",e=>{
+      ip.innerHTML="<b>"+AYTAM[i]+"</b>&nbsp;&nbsp;"+opt.ipucu(v);ip.style.opacity=1;
+      ip.style.left=Math.min(e.clientX+16,innerWidth-170)+"px";
+      ip.style.top=Math.max(e.clientY-44,8)+"px";});
+    r.addEventListener("mouseleave",()=>ip.style.opacity=0);
+  });
+  el(s,"line",{x1:L,x2:W-R,y1:sifir,y2:sifir},"stroke:var(--murekkep);stroke-width:1.4");
+  return {s:s,y:y,L:L,w:w,W:W,R:R};
+}
+
+cubuk("butce",D.butce,{L:52,T:26,tik:[-8,-4,0,4],etiket:v=>tr(v,0),
+  rk:v=>tr(v,1), ipucu:v=>tr(v,2)+" milyon TL", kalin:11});
+cubuk("cari",D.cari,{L:56,T:26,tik:[-2000,-1000,0,1000,2000],etiket:v=>tr(v/1000,0)+"mr",
+  rk:v=>tr(v/1000,1), ipucu:v=>tr(v,0)+" milyon $", band:[[6,9]]});
+cubuk("usd",D.usd,{L:38,T:22,tik:[-1,0,1],etiket:v=>tr(v,0),
+  rk:v=>tr(v,1), ipucu:v=>tr(v,2)+" puan", tekRenk:1, vurgu:2});
+cubuk("kredi",D.kredi,{L:38,T:22,tik:[-1,0,1],etiket:v=>tr(v,0),
+  rk:v=>tr(v,1), ipucu:v=>tr(v,2)+" puan", tekRenk:1, vurgu:2});
+const kk=cubuk("kontrol",D.kontrol,{L:52,T:22,tik:[-1,0,1],etiket:v=>tr(v,0),
+  rk:v=>tr(v,1), ipucu:v=>tr(v,2)+" puan", tekRenk:1});
+kk.s.querySelectorAll("rect").forEach(r=>{
+  if(r.getAttribute("fill")!=="transparent") r.setAttribute("style","fill:var(--soluk);opacity:.45");});
+// cari: yaz bloğu etiketi
+(function(){const s=document.getElementById("cari");
+  yaz(s,56+7.5*((700-56-12)/12),18,"Temmuz – Ekim: döviz girişi",
+    SANS+"font-size:11px;font-weight:600;fill:var(--isaret)","middle");})();
+
+/* turizm bindirmesi: çubuk = cari denge, koyu çizgi = net turizm geliri.
+   İkisi de milyon dolar; TEK eksen kullanılıyor, çift eksen kurulmuyor. */
+(function(){
+  const g=cubuk("turizm",D.cari12,{L:56,T:40,tik:[-2000,0,2000],etiket:v=>tr(v/1000,0)+"mr",
+    rk:v=>tr(v/1000,1), ipucu:v=>tr(v,0)+" milyon $ (cari denge)"});
+  const s=g.s, W=700, L=g.L, w=g.w, y=g.y;
+  const cx=i=>L+i*w+w/2;
+  let d="M "+cx(0)+" "+y(D.turizm[0]);
+  for(let i=1;i<12;i++) d+=" L "+cx(i)+" "+y(D.turizm[i]);
+  el(s,"path",{d:d,fill:"none"},
+    "stroke:var(--murekkep);stroke-width:2.2;stroke-linejoin:round;stroke-linecap:round");
+  D.turizm.forEach((v,i)=>el(s,"circle",{cx:cx(i),cy:y(v),r:3.2},
+    "fill:var(--murekkep);stroke:var(--kart);stroke-width:1.4"));
+  // doğrudan etiket — lejant kutusu yerine
+  yaz(s,cx(7)+10,y(D.turizm[7])-10,"net turizm geliri",
+    SANS+"font-size:11px;font-weight:600;fill:var(--murekkep)");
+  yaz(s,cx(8)+12,y(D.cari12[8])+16,"cari denge",
+    SANS+"font-size:11px;font-weight:600;fill:var(--piyasa)");
+  yaz(s,L,24,"Ağustos: cari fazlanın %88'i net turizm geliri",
+    SANS+"font-size:11.5px;font-weight:600;fill:var(--murekkep)");
+})();
+</script>
+</body>
+</html>

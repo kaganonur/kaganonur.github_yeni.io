@@ -112,6 +112,31 @@ export default function Home() {
             </div>
           </article>
 
+          {/* --- Türkiye Ekonomisi --- */}
+          <article className="glass-card proj-card featured-card">
+            <div className="badge-row">
+              <span className="badge badge-accent">{t.home.badgeLive}</span>
+              <span className="badge">{t.home.badgeIndividual}</span>
+            </div>
+            <h3 className="proj-title">{t.home.ekonomiTitle}</h3>
+            <p className="proj-sub">{t.home.ekonomiSub}</p>
+            <p className="proj-body">{t.home.ekonomiDesc}</p>
+            <div className="proj-detail proj-detail-result">
+              <strong>{t.home.labelResult}</strong> {t.home.ekonomiResult}
+            </div>
+            <div className="proj-detail proj-detail-methods">
+              <strong>{t.home.labelMethods}</strong> {t.home.ekonomiMethods}
+            </div>
+            <div className="proj-actions">
+              <a href="/turkiye-ekonomisi" className="btn btn-outline btn-sm">
+                {t.home.viewAnalysis}
+              </a>
+              <a href="/turkiye-ekonomisi/gezgin" className="btn btn-outline btn-sm">
+                {t.home.viewExplorer}
+              </a>
+            </div>
+          </article>
+
           {/* --- Two-up: Panel + ASA --- */}
           <div className="grid-2 proj-grid">
             <article className="glass-card proj-card">
