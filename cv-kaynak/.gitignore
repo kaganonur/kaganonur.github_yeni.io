@@ -1,0 +1,4 @@
+# Üretilen dosyalar (uret.py çıktısı) — depoda tutulmaz
+cv_*.html
+CV_KaganOnur_*.pdf
+__pycache__/
